@@ -1,0 +1,322 @@
+@charset "utf-8";
+
+
+@media screen and (max-width: 767px) {
+/* ------------------------------ Mobile (Start) ------------------------------ */
+	
+	/* Visual */
+	section.visual { position: relative; float: left; width: 100%; height: 100%; }
+	section.visual div.txt_wrap { position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; }
+	section.visual div.txt_wrap p.main_txt { position: absolute; top: 40%; left: 0; bottom: 0; right: 0; color: #e1e1e1; font-size: 2em; font-family: "LibreBaskerville-Bold"; line-height: 1.3; vertical-align: middle; }
+	section.visual div.txt_wrap p.sub_txt { position: absolute; top: 55%; left: 0; bottom: 0; right: 0; color: #e1e1e1; font-size: 1em; font-family: "LibreBaskerville-Regular"; line-height: 2; }
+
+	section.visual bg_wrap { position: absolute; width: 100%; height: 100vh; top: 0; left: 0;}
+	section.visual bg_wrap img { display: block; position: absolute; top: 0; left: 0; }
+	
+	
+
+	/* New Product */
+	section.new_product { position: relative; padding: 80px 0; width: 100%; height: 100%; margin: 0 auto; }
+	section.new_product p.section_title { font-size: 1.875em; }
+	section.new_product div.inner_wrap { position: relative; top: 0; left: 0; width: 100%; height: 100%; padding-top: 50px;  }
+	section.new_product div.inner_wrap div.view_mask { position: relative; width: 100%; height: 100%; text-align: center;}
+ 
+	section.new_product div.view_mask ul { width: 300%; }
+	section.new_product div.view_mask ul > li { float: left; width: 10%; }
+	section.new_product div.view_mask ul > li > a { display: block; width: 100%; }
+	section.new_product div.view_mask ul > li > a > div.img_wrap { position: relative; width: 38%; height: 100%; margin-left: 32%; }
+	section.new_product div.view_mask ul > li > a > div.img_wrap > img { width: 100%; height: 100%; object-fit: cover; }
+	section.new_product div.view_mask ul > li > a > p.np_name { width: 140px; margin-top: 10px; margin-left: 28%; font-family: "Roboto-Regular"; font-weight: bold; font-size: 0.9375em; text-align: center; }
+
+	/*section.new_product button.prev { position: absolute; top: 0%; left: -2%; width: 14%; height: 100%; background: url("../images/img_index_arrow_prev.png") no-repeat center center; }
+	section.new_product button.next { position: absolute; top: 0%; right: -2%; width: 14%; height: 100%; background: url("../images/img_index_arrow_next.png") no-repeat center center; } */
+	section.new_product button.prev { position: absolute; top: 15%; left: -3%; width: 15%; height: 100%; background: url("../images/img_index_arrow_prev.png") no-repeat center center; }
+	section.new_product button.next { position: absolute; top: 15%; right: -3%; width: 15%; height: 100%; background: url("../images/img_index_arrow_next.png") no-repeat center center; }
+	
+	
+
+	/* Product */
+	section.product { position: relative; width: 100%; height: 200%; }
+	section.product div.electric_wrap { position: absolute; top: 4%; left: 0; width: 100%; height: 50%; }
+	section.product div.electric_wrap > picture > img { width: 100%; height: 100%; clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85%); object-fit: cover; }
+	
+	section.product div.electric_wrap div.elec_txt_wrap { position: absolute; top: 4%; left: 5%; z-index: 10; width: 90%; text-align: left; color: #e8e8e8; }
+	section.product div.electric_wrap div.elec_txt_wrap > p.product_title { font-family: "Roboto-Bold"; font-size: 1.875em; }
+	section.product div.electric_wrap div.elec_txt_wrap > p.product_txt { margin-top: 40px; font-size: 1em; }
+
+	section.product div.electric_wrap div.elec_txt_wrap a.electric_info { position: absolute; bottom: -90px; left: 0; width: 120px; height: 60px; border: 1px solid #fff; font-size: 1em; text-align: center; line-height: 4; font-family: "Roboto-Bold"; }
+
+
+	section.product div.acoustic_wrap { position: absolute; top: 46.4%; left: 0; width: 100%; height: 50%; }
+	section.product div.acoustic_wrap > picture > img { width: 100%; height: 100%; clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%); object-fit: cover; } 
+	
+	section.product div.acoustic_wrap div.acou_txt_wrap { position: absolute; bottom: 6%; right: 3%; width: 90%; text-align: right; color: #e8e8e8; }
+	section.product div.acoustic_wrap div.acou_txt_wrap > p.product_title { font-family: "Roboto-Bold"; font-size: 1.875em; }
+	section.product div.acoustic_wrap div.acou_txt_wrap > p.product_txt { margin-top: 40px; font-size: 1em; }
+
+	section.product div.acoustic_wrap div.acou_txt_wrap a.acoustic_info { position: absolute; top: -90px; right: 0; width: 120px; height: 60px; border: 1px solid #fff; font-size: 1em; text-align: center; line-height: 4; font-family: "Roboto-Bold"; }
+	
+	
+	
+	/* Promo */
+	section.promo { position: relative; width: 100%; height: 140%; }
+	section.promo div.inner_wrap { height: 60%; }
+	section.promo p.section_title { position: absolute; top: 5%; left: 5%; font-size: 1.875em; }
+	section.promo p.promo_txt { position: absolute; top: 20%; left: 5%; width: 90%; height: 240px; font-size: 0.9375em; font-weight: bold; }
+	section.promo img { width: 100%; height: 30%; object-fit: cover; }
+	section.promo a.more { position: absolute; bottom: 8%; left: 5%; width: 120px; height: 60px; max-height: 70px; background: #e2e2e2; font-family: "Roboto-Bold"; font-size: 1em; text-align: center; line-height: 4; }
+	
+
+
+	/* Event */
+	section.event { position: relative; top: 0; left: 0; width: 100%; height: 100%; margin-top: 50px; }
+	section.event p.section_title { font-size: 1.875em; }
+	section.event p.e_subtxt { margin-top: 10px; text-align: center; font-size: 0.9375em; color: #a1a1a1; }
+	section.event div.view_mask { overflow: hidden; }
+	section.event div.view_mask > ul { width: 600%; padding-top: 40px; font-weight: bold; }
+	section.event div.view_mask > ul > li { float: left; width: 12%; text-align: left; }
+
+	section.event div.view_mask > ul > li > div.picture_wrap { padding-left: 30px; font-size: 0.9375em; }
+	section.event div.view_mask > ul > li > div.picture_wrap p.e_sub_title { width: 100%; margin-top: 15px; }
+	section.event div.view_mask > ul > li > div.picture_wrap p.date { width: 100%; margin-top: 5px; }
+	
+	section.event button.prev { position: absolute; top: 8.5%; left: 0; width: 30px; height: 450px; background: url("../images/img_index_arrow_prev.png") no-repeat center center;  }
+	section.event button.next { position: absolute; top: 8.5%; right: 0; width: 30px; height: 450px; background: url("../images/img_index_arrow_next.png") no-repeat center center; }
+	
+	
+	
+	
+	
+	
+	
+/* ------------------------------ Mobile (End) ------------------------------ */
+}
+
+/* 
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@   MOBILE	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+/* ------------------------------ TABLET (Start) ------------------------------ */
+	
+	/* Visual */
+	section.visual { position: relative; float: left; width: 100%; height: 100%; }
+	section.visual div.txt_wrap { position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; }
+	section.visual div.txt_wrap p.main_txt { position: absolute; top: 40%; left: 0; bottom: 0; right: 0; color: #e1e1e1; font-size: 2.875em; font-family: "LibreBaskerville-Bold"; line-height: 1.3; vertical-align: middle; }
+	section.visual div.txt_wrap p.sub_txt { position: absolute; top: 55%; left: 0; bottom: 0; right: 0; color: #e1e1e1; font-size: 1.875em; font-family: "LibreBaskerville-Regular"; line-height: 1; }
+
+	section.visual bg_wrap { position: absolute; width: 100%; height: 100vh; top: 0; left: 0;}
+	section.visual bg_wrap img { display: block; position: absolute; top: 0; left: 0; }
+	
+	
+
+	/* New Product */
+	section.new_product { position: relative; padding-top: 70px; width: 100%; height: 100%; }
+	section.new_product div.inner_wrap { position: relative; top: 0; left: 0; width: 100%; height: 100%;  }
+	section.new_product div.inner_wrap div.view_mask { position: relative; top: 0; width: 100%; height: 100%; text-align: center;}
+
+	section.new_product div.view_mask ul { position: absolute; top: 15%; width: 300%; }
+	section.new_product div.view_mask ul > li { float: left; width: 16.66666%; }
+	section.new_product div.view_mask ul > li > a { display: block; width: 100%; }
+	section.new_product div.view_mask ul > li > a > div.img_wrap { position: relative; width: 100%; height: auto; }
+	section.new_product div.view_mask ul > li > a > p.np_name { margin-top: 20px; font-family: "Roboto-Regular"; font-weight: bold; }
+
+	/* section.new_product button.prev { position: absolute; top: 10%; left: -5%; width: 20%; height: 50vh; background: url("../images/img_index_arrow_prev.png") no-repeat center center; bacgkround-position: cover; }
+	section.new_product button.next { position: absolute; top: 10%; right: 0%; width: 20%; height: 50vh; background: url("../images/img_index_arrow_next.png") no-repeat center center; bacgkround-position: cover; } */
+	section.new_product button.prev { position: absolute; top: 25%; left: 0; width: 10%; height: 50%; background: url("../images/img_index_arrow_prev.png") no-repeat center center; }
+	section.new_product button.next { position: absolute; top: 25%; right: 0; width: 10%; height: 50%; background: url("../images/img_index_arrow_next.png") no-repeat center center; }
+	
+
+	/* Product */
+	section.product { position: relative; width: 100%; height: 820px; }
+	section.product div.electric_wrap { position: absolute; width: 100%; height: 100%; }
+	section.product div.electric_wrap > picture > img { width: 100%; height: 100%; clip-path: polygon(0% 0%, 60% 0%, 45% 100%, 0% 100%); object-fit: cover; }
+	
+	section.product div.electric_wrap div.elec_txt_wrap { position: absolute; top: 6%; left: 3%; z-index: 10; width: 43%; text-align: left;  color: #e8e8e8; }
+	section.product div.electric_wrap div.elec_txt_wrap > p.product_title { margin-top: 20px; font-family: "Roboto-Bold"; font-size: 2.5em; }
+	section.product div.electric_wrap div.elec_txt_wrap > p.product_txt { margin-top: 65px; font-size: 1.125em; }
+
+	section.product div.electric_wrap div.elec_txt_wrap a.electric_info { position: absolute; bottom: -110px; left: 0; width: 150px; height: 70px; border: 1px solid #fff; font-size: 1.125em; text-align: center; line-height: 4; font-family: "Roboto-Bold"; }
+
+
+	section.product div.acoustic_wrap { position: absolute; width: 100%; height: 100%; }
+	section.product div.acoustic_wrap > picture > img { width: 100%; height: 100%; clip-path: polygon(55% 0%, 100% 0%, 100% 100%, 39% 100%); object-fit: cover; } 
+	
+	section.product div.acoustic_wrap div.acou_txt_wrap { position: absolute; bottom: 6%; right: 3%; width: 43%; text-align: right; color: #e8e8e8; }
+	section.product div.acoustic_wrap div.acou_txt_wrap > p.product_title { margin-top: 40px; font-family: "Roboto-Bold"; font-size: 2.5em; }
+	section.product div.acoustic_wrap div.acou_txt_wrap > p.product_txt { margin-top: 65px; font-size: 1.125em; }
+
+	section.product div.acoustic_wrap div.acou_txt_wrap a.acoustic_info { position: absolute; top: -60px; right: 0; width: 150px; height: 70px; border: 1px solid #fff; font-size: 1.125em; text-align: center; line-height: 4; font-family: "Roboto-Bold"; }
+
+
+
+	/* Promo */
+	section.promo { position: relative; width: 100%; height: 75%; }
+	section.promo div.inner_wrap { height: 100%; }
+	section.promo p.section_title { position: absolute; top: 17%; left: 5%;  }
+	section.promo p.promo_txt { position: absolute; top: 30%; left: 5%; width: 41%; height: 240px; min-height: 240px; font-weight: bold; }
+	section.promo img { position: absolute; top: 0; right: 0; width: 50%; height: 550px; margin: 100px 0; object-fit:cover; }
+	section.promo a.more { position: absolute; bottom: 17%; left: 5%; width: 150px; height: 70px; max-height: 70px; background: #e2e2e2; font-family: "Roboto-Bold"; font-size: 1.125em; text-align: center; line-height: 4; }
+	
+
+
+	/* Event */
+	section.event { overflow: hidden; position: relative; top: 0; left: 0; width: 100%; height: 86.84%; }
+	section.event p.section_title { padding-top: 100px; }
+	section.event p.e_subtxt { margin-top: 15px; text-align: center; font-size: 1.0625em; color: #a1a1a1; }
+	section.event div.view_mask { overflow: hidden; }
+	section.event div.view_mask > ul { overflow: hidden; width: 400%; padding-top: 100px; font-size: 1.125em; font-weight: bold; }
+	section.event div.view_mask > ul > li { float: left; width: 13%; padding-left: 2.5%; text-align: left; }
+	section.event div.view_mask > ul > li > div.picture_wrap { margin-top: 25px; margin-bottom: 20px; }
+	section.event div.view_mask > ul > li > div.picture_wrap p.e_sub_title { margin-top: 15px; width: 100%; }
+	section.event div.view_mask > ul > li > div.picture_wrap p.date { width: 100%; }
+	
+	section.event button.prev { position: absolute; top: 10%; left: 0; width: 50px; height: 100%; background: url("../images/img_index_arrow_prev.png") no-repeat center center; }
+	section.event button.next { position: absolute; top: 10%; right: 0; width: 50px; height: 100%; background: url("../images/img_index_arrow_next.png") no-repeat center center; }
+	
+	
+	
+	
+	
+/* ------------------------------ TABLET (End) ------------------------------ */
+}
+
+/* 
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@   TABLET	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+
+@media screen and (min-width: 1025px) {
+/* ------------------------------ DESKTOP (Start) ------------------------------ */
+	
+	/* Visual */
+	section.visual { position: relative; float: left; width: 100%; height: 1080px; }
+	section.visual div.txt_wrap { position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; }
+	section.visual div.txt_wrap p.main_txt { position: absolute; top: 50%; left: 0; bottom: 0; right: 0; color: #e1e1e1; font-size: 3.4375em; font-family: "LibreBaskerville-Bold"; line-height: 1; vertical-align: middle; }
+	section.visual div.txt_wrap p.sub_txt { position: absolute; top: 58%; left: 0; bottom: 0; right: 0; color: #e1e1e1; font-size: 1.875em; font-family: "LibreBaskerville-Regular"; line-height: 1; }
+
+	section.visual bg_wrap { position: absolute; width: 100%; height: 100vh; top: 0; left: 0;}
+	section.visual bg_wrap img { display: block; position: absolute; top: 0; left: 0; }
+	
+	
+	/* New Product */
+	section.new_product { overflow: hidden; position: relative; padding: 100px 0; width: 100%; height: 100vh; margin: 0 auto; }
+	section.new_product div.inner_wrap { width: 100%; padding: 100px 0; margin: 0 auto;  }
+	section.new_product div.inner_wrap div.view_mask { position: relative; width: 100%; height: 100%; text-align: center; }
+	section.new_product div.view_mask { overflow: hidden; }
+	section.new_product div.view_mask ul { width: 150%; margin-left: ; }
+	section.new_product div.view_mask ul > li { float: left; width: 16.66666%; }
+	section.new_product div.view_mask ul > li > a { display: block; width: 100%; }
+	section.new_product div.view_mask ul > li > a > div.img_wrap { position: relative; width: 100%; height: auto; }
+	section.new_product div.view_mask ul > li > a > p.np_name { margin-top: 20px; font-family: "Roboto-Regular"; }
+	section.new_product div.view_mask ul > li:hover > a > p.np_name { font-weight: bold; }
+
+	/*section.new_product button.prev { position: absolute; top: 10%; left: 0%; width: 15%; height: 50vh; background: url("../images/img_index_arrow_prev.png") no-repeat center center; bacgkround-position: cover; transform: translateX(-45%); }
+	section.new_product button.next { position: absolute; top: 10%; right: 0; width: 30%; height: 50vh; background: url("../images/img_index_arrow_next.png") no-repeat center center; bacgkround-position: cover; transform: translateX(10%); } */
+	section.new_product button.prev { position: absolute; top: 25%; left: 0%; width: 20%; height: 50%; background: url("../images/img_index_arrow_prev.png") no-repeat center center; }
+	section.new_product button.next { position: absolute; top: 25%; right: 0%; width: 20%; height: 50%; background: url("../images/img_index_arrow_next.png") no-repeat center center; }
+	
+
+	/* Product */
+	section.product { position: relative; width: 100%; height: 820px; }
+	section.product div.electric_wrap { position: absolute; width: 100%; height: 100%; }
+	section.product div.electric_wrap > picture > img { width: 100%; height: 100%; clip-path: polygon(0% 0%, 60% 0%, 45% 100%, 0% 100%);  object-fit: cover; }
+	
+	section.product div.electric_wrap div.elec_txt_wrap { position: absolute; top: 6%; left: 3%; z-index: 10; width: 25%; text-align: left;  color: #e8e8e8; }
+	section.product div.electric_wrap div.elec_txt_wrap > p.product_title { font-family: "Roboto-Bold"; font-size: 2.5em; }
+	section.product div.electric_wrap div.elec_txt_wrap > p.product_txt { margin-top: 65px; font-size: 1.125em; }
+
+	section.product div.electric_wrap div.elec_txt_wrap a.electric_info { position: absolute; bottom: -110px; left: 0; width: 150px; height: 70px; border: 1px solid #fff; font-size: 1.125em; text-align: center; line-height: 4; font-family: "Roboto-Bold"; }
+
+
+	section.product div.acoustic_wrap { position: absolute; width: 100%; height: 100%; }
+	section.product div.acoustic_wrap > picture > img { width: 100%; height: 100%; clip-path: polygon(55% 0%, 100% 0%, 100% 100%, 39% 100%); object-fit: cover; } 
+	
+	section.product div.acoustic_wrap div.acou_txt_wrap { position: absolute; bottom: 6%; right: 3%; width: 25%; text-align: right; color: #e8e8e8; }
+	section.product div.acoustic_wrap div.acou_txt_wrap > p.product_title { margin-top: 40px; font-family: "Roboto-Bold"; font-size: 2.5em; }
+	section.product div.acoustic_wrap div.acou_txt_wrap > p.product_txt { margin-top: 65px; font-size: 1.125em; }
+
+	section.product div.acoustic_wrap div.acou_txt_wrap a.acoustic_info { position: absolute; top: -60px; right: 0; width: 150px; height: 70px; border: 1px solid #fff; font-size: 1.125em; text-align: center; line-height: 4; font-family: "Roboto-Bold"; }
+
+
+
+	/* Promo */
+	section.promo { position: relative; width: 100%; height: 700px; }
+	section.promo div.inner_wrap { height: 74.71vh; min-height: 900px; }
+	section.promo p.section_title { position: absolute; top: 13%; left: -10%; }
+	section.promo p.promo_txt { position: absolute; top: 22%; left: -10%; width: 405px; height: 240px; min-height: 240px; font-weight: bold; }
+	section.promo img { position: absolute; top: 0; right: 0; width: 978px; height: 550px; margin: 70px 0;  }
+	
+	section.promo a.more { position: absolute; bottom: 33%; left: -10%; width: 150px; height: 70px; max-height: 70px; background: #e2e2e2; font-family: "Roboto-Bold"; font-size: 1.125em; text-align: center; line-height: 4; }
+	section.promo a:hover { background: #1e1e1e; color: #fff; }
+	
+
+
+	/* Event */
+	section.event { overflow: hidden; position: relative; top: 0; left: 0; width: 100%; height: 86.84%; margin-top: 100px; }
+	section.event p.e_subtxt { margin-top: 15px; text-align: center; font-size: 1.0625em; color: #a1a1a1; }
+	section.event div.view_mask { overflow: hidden; }
+	section.event div.view_mask > ul { position: relative; width: 300%; padding-top: 70px; font-size: 1.125em; font-weight: bold; }
+	section.event div.view_mask > ul > li { float: left; width: 9.94%; text-align: left; }
+	section.event div.view_mask > ul > li > div.picture_wrap { margin-top: 25px; margin-bottom: 20px; }
+	section.event div.view_mask > ul > li > div.picture_wrap p.e_sub_title { margin-top: 15px; width: 100%; }
+	section.event div.view_mask > ul > li > div.picture_wrap p.date { width: 100%; }
+	
+	section.event button.prev { position: absolute; top: 14%; left: -25.3%; width: 25%; height: 85%; background: url("../images/img_index_arrow_prev.png") no-repeat center center; }
+	section.event button.next { position: absolute; top: 14%; right: -23.3%; width: 25%; height: 85%; background: url("../images/img_index_arrow_next.png") no-repeat center center; }
+	
+	
+	
+/* ------------------------------ DESKTOP (End) ------------------------------ */
+}
+
+/* 
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@   DESKTOP	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
