@@ -1,0 +1,1350 @@
+@charset "utf-8";
+
+
+@media screen and (max-width: 767px) {
+/* ------------------------------ Mobile (Start) ------------------------------ */
+	
+	body { background: #333; }
+
+	section.visual { width: 100%; height: 50vh; }
+	section.visual > p { padding: 5vw; color: #fff; font-family:"Poppins-Bold"; font-size: 55px; line-height: 1; }
+	img { object-fit: cover; }
+	.parent {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(10, 2fr);
+		grid-column-gap: 2vw;
+		grid-row-gap: 2vw;
+		
+		width: 90vw;
+		height: 250vh; 
+		
+		margin: 0 auto;
+		padding-bottom: 1vw;
+	}
+	
+	.parent > div { overflow: hidden; border-radius: 0.5vw; }
+	
+	
+	.child_01 { grid-area: 1 / 1 / 2 / 2; }
+	.child_02 { grid-area: 1 / 2 / 2 / 3; }
+	.child_03 { grid-area: 2 / 1 / 3 / 2; }
+	.child_04 { grid-area: 2 / 2 / 3 / 3; }
+	.child_05 { grid-area: 3 / 1 / 4 / 3; }
+	.child_06 { grid-area: 4 / 1 / 6 / 3; }
+	.child_07 { grid-area: 6 / 1 / 7 / 3; background: #f4df2c; }
+	.child_08 { grid-area: 7 / 1 / 8 / 3; background: lightsalmon; }
+	.child_09 { grid-area: 8 / 1 / 9 / 2; background: #459b34;}
+	.child_10 { grid-area: 8 / 2 / 9 / 3; }
+	.child_11 { grid-area: 9 / 1 / 11 / 2; background: #fff; }
+	.child_12 { grid-area: 9 / 2 / 11 / 3; background: #fff; }
+
+	div.child_wrap { width: 100%; height: 100%; }
+	div.child_wrap_inner { width: 100%; height: 100%; }
+	
+	div.child_wrap_02 { grid-area: 3 / 1 / 4 / 3; }
+	div.child_wrap_03 { grid-area: 7 / 1 / 8 / 3; }
+
+	/* photoshop */
+	div.child_01 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_01 div.text_wrap { position: absolute; left: 8px; top: 8px; width: 90%; }
+	div.child_01 div.text_wrap p.title { margin-bottom: 0.1em; font-family:"Poppins-Bold"; font-size: 5.5vw; color: #333; line-height: 1.2; }
+	div.child_01 div.text_wrap p.title span { color: #264BCC; }
+	div.child_01 div.text_wrap p.desc { display: none; font-family:"Poppins-Regular"; font-size: 1.6vw; color: #666; line-height: 1.2; }
+	div.child_01 div.text_wrap p.second_title { position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 1.5vw; color: #333; line-height: 1.2; color: #264bcc; }
+	div.child_01 div.text_wrap p.second_desc { position: absolute; left: 20px; top: 3.3em; font-family:"NotoSansKR-Regular"; font-size: 0.8vw; color: #666; line-height: 1.2; }
+	
+	/* photoshop sub */
+	div.child_01_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_01_sub div.text_wrap { position: absolute; left: 8px; top: 8px; width: 83%; }
+	div.child_01_sub div.text_wrap p.title {position: absolute; left: 0; top: -3px; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 5.5vw; color: #333; line-height: 1.2; color: #264bcc; }
+	div.child_01_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 3.5em; font-family:"NotoSansKR-Regular"; font-size: 2vw; color: #666; line-height: 1.2; }
+	
+	/* photoshop hover */
+	div.child_wrap { perspective: 1100px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_01 { backface-visibility: hidden; }
+	div.child_01_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_01_sub img { transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	/* html */
+	div.child_02 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_02 div.text_wrap { position: absolute; left: 8px; top: 8px; width: 80% }
+	div.child_02 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 5.5vw; color: #333; line-height: 1.2; }
+	div.child_02 div.text_wrap p.title span { letter-spacing: -0.05em; }
+	div.child_02 div.text_wrap p.desc { display: none; font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1.4; }
+	
+	/* html sub */
+	div.child_02_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_02_sub div.text_wrap { position: absolute; left: 8px; top: 8px; width: 60%; }
+	div.child_02_sub div.text_wrap p.title { position: absolute; left: 0; top: -3px; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 4.3vw; color: #333; line-height: 1.2; }
+	div.child_02_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 3.5em; width: 90%; font-family:"NotoSansKR-Regular"; font-size: 1.8vw; color: #666; line-height: 1.15; }
+	div.child_02_sub div.text_wrap p.desc:nth-of-type(3) { display: none; }
+	
+	/* html hover */
+	div.child_wrap { perspective: 1100px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_02 { backface-visibility: hidden; }
+	div.child_02_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* javascript */
+	div.child_03 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_03 div.text_wrap { position: absolute; left: 8px; top: 8px; width: 80% }
+	div.child_03 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 5.5vw; color: #009b93; line-height: 1.2; }
+	div.child_03 div.text_wrap p.title span { letter-spacing: -0.05em; }
+	div.child_03 div.text_wrap p.desc { display: none; font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1.4; }
+
+	/* javascript sub */
+	div.child_03_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_03_sub div.text_wrap { position: absolute; left: 8px; top: 8px; width: 60%; }
+	div.child_03_sub div.text_wrap p.title {position: absolute; left: 0; top: -3px; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 4.5vw; color: #009b93; line-height: 1.2; }
+	div.child_03_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 2em; width: 95%; font-family:"NotoSansKR-Regular"; font-size: 3.5vw; color: #666; line-height: 1.2; }
+	div.child_03_sub div.text_wrap p:nth-of-type(3) { display: none; }
+	
+	/* javascript hover */
+	div.child_wrap { perspective: 1100px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_03 { backface-visibility: hidden; }
+	div.child_03_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* illustrator */
+	div.child_04 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_04 div.text_wrap { position: absolute; left: 8px; top: 8px; width: 80% }
+	div.child_04 div.text_wrap p.title { margin-bottom: 0.4em; font-family:"Poppins-bold"; font-size: 5.5vw; color: #333; line-height: 1.2; }
+	div.child_04 div.text_wrap p.title span:nth-of-type(1) { color: #b438d2; }
+	div.child_04 div.text_wrap p.title span:last-of-type { color: #264bcc; }
+	div.child_04 div.text_wrap p.desc { display: none; font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1; }
+
+	/* illustrator sub */
+	div.child_04_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_04_sub div.text_wrap { position: absolute; left: 8px; top: 8px; width: 100%; }
+	div.child_04_sub div.text_wrap p.title {position: absolute; left: 0; top: -3px; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 5vw; color: #b438d2; line-height: 1.2; }
+	div.child_04_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 2em; width: 91%; font-family:"NotoSansKR-Regular"; font-size: 3vw; color: #666; line-height: 1.2; }
+	
+	/* illustrator hover */
+	div.child_wrap { perspective: 1000px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_04 { backface-visibility: hidden; }
+	div.child_04_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_04_sub img { transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* attitude */
+	div.child_wrap_02 { width: 100%; height: 100%; }
+	div.child_wrap_inner_02 { width: 100%; height: 100%; }
+	div.child_05 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_05 div.text_wrap { position: absolute; left: 8px; top: 8px; width: 80%; }
+	div.child_05 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 5.5vw; color: #333; }
+	div.child_05 div.text_wrap p.title > span { color: #d41818; }
+	div.child_05 div.text_wrap p.desc { display: none; font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1.5; }
+
+	/* attitude sub */
+	div.child_05_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_05_sub div.text_wrap { position: absolute; left: 8px; top: 8px; width: 90%; }
+	div.child_05_sub div.text_wrap p.title { position: absolute; left: 0; top: -3px; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 5vw; color: #d41818; line-height: 1.2; }
+	div.child_05_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 2em; width: 100%; font-family:"NotoSansKR-Regular"; font-size: 3.5vw; color: #666; line-height: 1.1; }
+	
+	/* attitude hover */
+	div.child_wrap_02 { perspective: 1000px; }
+	div.child_wrap_inner_02 { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_05 { backface-visibility: hidden; }
+	div.child_05_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_wrap_02:hover div.child_wrap_inner_02 { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* profile */
+	div.child_06 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_06 div.text_wrap { position: absolute; top: 3vw; left: 4.3vw; width: 90%; height: 65%; }
+	div.child_06 div.text_wrap p.title { font-family:"Poppins-Bold"; font-size: 10vw; color: white; line-height: 1.5; }
+	div.child_06 div.text_wrap p.center_line { width: 10vw; height: 5px; margin: 20px 0 20px 0; background: #ddd; }
+	div.child_06 div.text_wrap p.desc { font-family:"Poppins-Bold"; font-size: 8vw; color: #fff; line-height: 1.5; }
+	
+	/* break */
+	div.child_07 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_07 div.text_wrap { position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; }
+	div.child_07 div.text_wrap img { width: 33.12vw; height: 22vw; margin-top: 11%; }
+	div.child_07 div.text_wrap p.title { float: right; margin-top: 3.5vw; margin-right: 9vw; font-family:"Poppins-Bold"; font-size: 6vw; color: black; line-height: 1.5; }
+	div.child_07 div.text_wrap p.title span:nth-of-type(1) { color: #1399c8; }
+	div.child_07 div.text_wrap p.title span:nth-of-type(2) { color: #2db84a; }
+	div.child_07 div.text_wrap p.title span:last-of-type { color: #d41818; }
+	
+	/* coding */
+	div.child_wrap_03 { width: 100%; height: 100%; }
+	div.child_wrap_inner_03 { width: 100%; height: 100%; }
+	div.child_08 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_08 div.text_wrap { position: absolute; top: 1.5vw; left: 38vw; width: 55%; }
+	div.child_08 div.text_wrap p.title { margin-bottom: 0.2em; font-family:"Poppins-bold"; font-size: 5vw; color: #fff; line-height: 1.2; }
+	div.child_08 div.text_wrap p.title span { color: #264bcc; }
+	div.child_08 div.text_wrap p.desc { font-family:"Poppins-Regular"; font-size: 3.5vw; color: #fff; line-height: 1.3; }
+
+	/* coding sub */
+	div.child_08_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; }
+	div.child_08_sub div.text_wrap { position: absolute; top: 2vw; left: 38vw; width: 58%; }
+	div.child_08_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; font-family: "NotoSansKR-Bold"; font-size: 5vw; color: #fff; line-height: 1.2; }
+	div.child_08_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 2.5em; width: 90%; font-family:"NotoSansKR-Regular"; font-size: 3.5vw; color: #fff; line-height: 1.2; }
+	div.child_08_sub div.text_wrap p.desc:nth-of-type(3) { display: none; }
+
+	/* coding hover */
+	div.child_wrap_03 { perspective: 1000px; }
+	div.child_wrap_inner_03 { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_08 { backface-visibility: hidden; }
+	div.child_08_sub { backface-visibility: hidden; transform: rotateX(180deg); }
+	div.child_wrap_03:hover div.child_wrap_inner_03 { display: block; transform: rotateX(180deg); transition: transform 0.7s; }
+	
+	
+	/* experience */
+	div.child_09 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_09 div.text_wrap { position: absolute; top: 6px; left: 5px; width: 95%; }
+	div.child_09 div.text_wrap p.title { margin-bottom: 0.5em; font-family:"Poppins-bold"; font-size: 4.5vw; color: #111; line-height: 1.2; }
+	div.child_09 div.text_wrap p.title span:nth-of-type(1) { color: #f12e1a; }
+	div.child_09 div.text_wrap p.title span:last-of-type { color: #042ee1; }
+	div.child_09 div.text_wrap p.desc { font-family:"Poppins-Regular"; font-size: 4vw; color: #fff; line-height: 1.1; }
+	div.child_09 div.text_wrap p:nth-of-type(3) { display: none; }
+	
+	
+	/* CONTACT */
+	div.child_10 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_10 div.text_wrap { position: absolute; top: 8px; left: 8px; width: 100%; }
+	div.child_10 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 6vw; color: #2CC; line-height: 1.2; }
+	div.child_10 div.text_wrap p.desc { display: none; font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1.3; }
+
+	/* CONTACT sub */
+	div.child_10_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_10_sub div.text_wrap { position: absolute; left: 8px; top: 8px; width: 80%; }
+	div.child_10_sub div.text_wrap p.title {position: absolute; left: 0; top: -3px; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 6vw; color: #2CC; line-height: 1.2; }
+	div.child_10_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 3em; width: 65%; font-family:"NotoSansKR-Regular"; font-size: 2.5vw; color: #666; line-height: 1.2; }
+	
+	/* CONTACT hover */
+	div.child_wrap { perspective: 1000px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_10 { backface-visibility: hidden; }
+	div.child_10_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* MGL */
+	div.child_11 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_11 > img { width: 100%; height: 100%; object-fit: cover; }
+	div.child_11 div.text_wrap { position: absolute; bottom: 0; right: 0; padding: 1vw 1.5vw; background: rgba(80, 80, 80, 0.8); color: #fff; }
+	div.child_11 div.text_wrap p { text-align: right; font-family:"Poppins-Medium"; font-size: 1.75vw; }
+	
+	
+	/* Under the sea */
+	div.child_12 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_12 > img { width: 100%; height: 100%; object-fit: cover; }
+	div.child_12 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_12 div.text_wrap { position: absolute; bottom: 0; right: 0; padding: 1vw 1.5vw; background: rgba(55, 161, 170, 0.8); color: #fff; }
+	div.child_12 div.text_wrap p { text-align: right; font-family:"Poppins-Medium"; font-size: 1.75vw; }
+	
+	
+	/*=================*/
+	
+	div.popup_wrap { display: none; position: fixed; left: 0; top: 0; z-index: 110; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.5); }
+	
+	div.popup_wrap button.closed { position: fixed; right: 15px; top: 15px; width: 20px; height: 20px; }
+	div.popup_wrap button.closed > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+	
+	div.popup_wrap div.inner { display: block; position: fixed; left: 50%; top: 53%; width: 88vw; height: 88vh; padding: 20px; border-radius: 0.5vw; background: white; transform: translate(-50%, -50%); text-align: center; }
+	
+	div.popup_wrap div.inner div.contents { overflow-x: hidden; overflow-y: auto; width: 100%; height: 100%; }
+	div.popup_wrap div.inner div.contents::-webkit-scrollbar { display: none; }
+	div.popup_wrap div.inner div.contents { -ms-overflow-style: none; scrollbar-width: none; }
+	
+	div.popup_wrap div.inner div.contents div.profile { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info { position: relative; top: 0; left: 0; width: 100%; height: 50vh; font-family: "Poppins-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info p.info_prof { color: #333; font-family: "Poppins-Bold"; font-size: 8vw; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info p.info_line {  position: relative; top: 0; left: 50%; width: 40px; height: 5px; margin-bottom: 3vh; background: #d41818; transform: translateX(-50%); }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info p.i_sub { font-family: "Poppins-Medium"; font-size: 6vw; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info p { font-size: 4vw; }
+	
+	/* ======== 팝업 기본 설정 ========= */
+	
+	/* profile pop */
+	div.popup_wrap div.inner div.contents div.profile ul.my_info:nth-of-type(1) { height: 27vh; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.persona { display: inline-block; position: absolute; top: 50%; left: 5%; text-align: left; line-height: 1.4; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.persona p:nth-of-type(2) { padding-top: 1%; font-family: "NotoSansKR-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.persona p:nth-of-type(2) > span { font-family: "Poppins-Regular"; }
+	
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education { display: inline-block; position: absolute; top: 120%; left: 5%; text-align: left; line-height: 1.4; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education span { font-family: "Poppins-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education p:nth-of-type(2) { padding-top: 1%; font-family: "NotoSansKR-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education p:nth-of-type(3) { font-family: "NotoSansKR-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education p:nth-of-type(4) { font-family: "NotoSansKR-Regular"; }
+	
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu { position: relative; top: 45%; left: 0; width: 100%; height: 50vh; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box br { display: none; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box { display: inline-block; width: 68vw; height: 75vw; margin: 7%; background: #fff; box-shadow: 0px 2px 10px 0px black; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box > p.line { display: none; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box > p.txt { padding: 0 11px; margin-top: 20px; font-family: "NotoSansKR-Regular"; font-size: 5vw; line-height: 1.5; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box > img.pop_img { width: 70px; height: 70px; margin-top: 7%; object-fit: cover; }
+	
+	
+	
+	/*=================== mgl====================== */
+	div.popup_wrap div.inner div.contents div.m_work_01 { position: relative; top: 0; left: 0; width: 100%; height: 100vh; margin: 0 auto; }
+	div.popup_wrap div.inner div.contents div.m_work_01 h2.m_title { font-family: "Poppins-Bold"; font-size: 1.5em; text-align: left; }
+	div.popup_wrap div.inner div.contents div.m_work_01 p.m_line { width: 40px; height: 4px; margin: 20px 0 20px 0; background: black; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_inner_wrap { position: relative; top: 0; left: 0; z-index: 20; width: 100%; height: auto; text-align: left; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_inner_wrap p.m_sub_title { font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_inner_wrap p:nth-of-type(2) { width: 100%; padding-top: 20px; margin-bottom: 70px; font-size: 1em; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_inner_wrap a { padding: 18px 18px; color: #333; border: 1px solid black; font-size: 1.125em; font-weight: bold; }
+
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap { position: absolute; top: 10%; left: 0; z-index: 1; width: 100%; height: 100%; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap div.img_shadow { position: absolute; top: 157.4%; right: 27%; width: 70px; height: 30px; object-fit: cover; box-shadow: 0 10px 10px -8px gray; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap img:nth-of-type(1) { position: absolute; top: 105%; left: 5%; width: 220px; height: 150px; object-fit: cover; box-shadow: 0 8px 8px 8px gray; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap img:nth-of-type(2) { position: absolute; top: 138%; right: 5%; width: 182px; height: 140px; object-fit: cover; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap img:nth-of-type(3) { position: absolute; top: 144%; right: 5%; width: 86px; height: 108px; object-fit: cover; box-shadow: 8px 8px 8px 0px gray; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap img:nth-of-type(4) { position: absolute; top: 149.5%; right: 31%; width: 40px; height: 78px; object-fit: cover; box-shadow: 0px 8px 8px -8px gray; }
+	
+	
+	div.m_work_02 { position: relative; top: 100%; left: 0; width: 100%; height: 70vh; margin: 0 auto; margin-top: 40px; }
+	div.m_work_02 h2.m_title { font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.m_work_02 p.m_line { width: 40px; height: 4px; margin: 20px 0 50px 0; background: black; }
+	div.m_work_02 div.m_inner_wrap_02 { position: relative; top: 0; left: 0; z-index: 20; width: 100%; height: auto; text-align: left; }
+	div.m_work_02 div.m_inner_wrap_02 p.m_sub_title { width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.m_work_02 div.m_inner_wrap_02 p.m_sub_title:nth-of-type(3) { position: absolute; top: 0%; left: 76%; width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.m_work_02 div.m_inner_wrap_02 p.m_sub_title:nth-of-type(4) { position: absolute; top: 56.5%; left: 76%; width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+
+	div.m_work_02 div.m_inner_wrap_02 div.concept { position: relative; top: 0; left: 0%; width: 80%; height: 75px; margin: 20px 0 50px 0; text-align: left; font-weight: bold; }
+	div.m_work_02 div.m_inner_wrap_02 div.concept > div.concept_01 { display: inline-block; width: 75px; height: 75px; padding-top: 24px; margin-left: 0px; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 5000px; text-align: center; }
+	div.m_work_02 div.m_inner_wrap_02 div.concept > div.concept_02 { display: inline-block; width: 75px; height: 75px; padding-top: 24px; margin-left: -20px; color: #c02020; border: 2px solid #c02020; border-radius: 5000px; text-align: center; }
+	div.m_work_02 div.m_inner_wrap_02 div.concept > div.concept_03 { display: inline-block; width: 75px; height: 75px; padding-top: 24px; margin-left: -20px; color: #888; border: 2px solid #888; border-radius: 5000px; text-align: center; }
+	
+	
+	div.m_work_02 div.m_inner_wrap_02 div.color { position: relative; top: 0; left: 0; width: 100%; height: auto; margin: 20px 0; font-weight: bold; text-align: left; }
+
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_01 { display: inline-block; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_02 { display: inline-block; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_03 { display: inline-block; }
+
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_01 > p.circle { display: inline-block; width: 80px; height: 100%; padding-top: 80px; margin-right: 5px;  background: #1e1e1e; border-radius: 5000px; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_02 > p.circle { display: inline-block; width: 80px; height: 100%; padding-top: 80px; margin-right: 5px; background: #c02020; border-radius: 5000px; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_03 > p.circle { display: inline-block; width: 80px; height: 100%; padding-top: 80px; background: #E8E8E8; border-radius: 5000px; }
+
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_01 > p:nth-of-type(2) { margin-top: 10px; padding-left: 10px; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_02 > p:nth-of-type(2) { margin-top: 10px; padding-left: 10px; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_03 > p:nth-of-type(2) { margin-top: 10px; padding-left: 10px; }
+	
+	
+	div.m_work_02 div.m_inner_wrap_02 div.font { position: absolute; top: 0%; left: 76%; width: 73%; height: auto; margin: 20px 0; color: #ggg; font-weight: bold; text-align: left; }
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_sub { display: inline-block; margin-top: 20px; margin-left: 15px; font-size: 2.5em; }
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_txt { display: block; font-size: 1.25em; }
+	
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_sub:nth-of-type(1) { margin-left: 0; font-family: "LibreBaskerville-Bold"}
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_sub:nth-of-type(2) { font-family: "NotoSansKR-Bold"}
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_sub:nth-of-type(3) { margin-bottom: 20px; font-family: "Montserrat-Bold" }
+
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_txt:nth-of-type(4) { font-family: "LibreBaskerville-Bold"}
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_txt:nth-of-type(5) { font-family: "NotoSansKR-Bold"}
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_txt:nth-of-type(6) { font-family: "Montserrat-Bold" }
+	
+	div.m_work_02 div.m_inner_wrap_02 div.logo { position: absolute; top: 60%; left: 76%; width: 73%; height: auto; margin: 20px 0; font-weight: bold; text-align: left; }
+	div.m_work_02 div.m_inner_wrap_02 div.logo img { float: left; width: 85px; height: 100px; margin-top: 20px; margin-right: 20px; object-fit: cover; }
+	div.m_work_02 div.m_inner_wrap_02 div.logo p { margin-top: 20px; }
+
+	div.m_work_03 { position: relative; top: 300%; left: 0; width: 100%; height: 65vh; margin: 0 auto; }
+	div.m_work_03 h2.m_title { font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.m_work_03 div.m_inner_wrap_03 { position: relative; top: 0; left: 0; z-index: 20; width: 100%; height: 100%; text-align: left; }
+	div.m_work_03 div.m_inner_wrap_03 p.m_sub_title { width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.m_work_03 div.m_inner_wrap_03 img.desk { position: absolute; top: 30%; left: 0; width: 600px; height: 360px; object-fit: cover; }
+	div.m_work_03 div.m_inner_wrap_03 p.m_sub_title { margin-top: 30px; font-family: "Poppins-Bold"; font-size: 1.5em; }
+	div.m_work_03 div.m_inner_wrap_03 p:nth-of-type(2) { width: 100%; padding-top: 20px; margin-bottom: 100px; font-size: 1.125em; }
+	
+	
+	
+	/* ======================Under the SEA======================= */
+	
+	div.popup_wrap div.inner div.contents div.u_work_01 { position: relative; top: 0; left: 0; width: 100%; height: 100vh; margin: 0 auto; padding: 20px; }
+	div.popup_wrap div.inner div.contents div.u_work_01 h2.u_title { color: #4DA6FF; font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.popup_wrap div.inner div.contents div.u_work_01 p.u_line { width: 40px; height: 4px; margin: 20px 0 50px 0; background: black; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_inner_wrap { position: relative; top: 0; left: 0; z-index: 20; width: 100%; height: auto; text-align: left; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_inner_wrap p.u_sub_title { font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_inner_wrap p:nth-of-type(2) { width: 100%; padding-top: 20px; margin-bottom: 100px; font-size: 1em; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_inner_wrap a { padding: 18px 38px; color: #333; border: 1px solid black; font-size: 1.125em; font-weight: bold; }
+
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap { position: absolute; top: 10%; left: 0; z-index: 1; width: 100%; height: 100%; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap div.img_shadow { position: absolute; top: 82.5%; right: 21.5%; width: 83px; height: 30px; object-fit: cover; box-shadow: 0 10px 10px -8px gray; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap img:nth-of-type(1) { position: absolute; top: 50%; right: 10%; width: 512px; height: 323px; object-fit: cover; box-shadow: 0 8px 8px 8px gray; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap img:nth-of-type(2) { position: absolute; top: 65%; right: 5%; width: 270px; height: 210px; object-fit: cover; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap img:nth-of-type(3) { position: absolute; top: 71%; right: 3%; width: 112px; height: 150px; object-fit: cover; box-shadow: 8px 8px 8px 0px gray; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap img:nth-of-type(4) { position: absolute; top: 74.5%; right: 16%; width: 60px; height: 115px; object-fit: cover; box-shadow: 0px 8px 8px -8px gray; }
+	
+	
+	div.u_work_02 { position: relative; top: 0; left: 0; width: 100%; height: 70vh; margin: 0 auto; margin-top: 40px; padding: 20px; }
+	div.u_work_02 h2.u_title { font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.u_work_02 p.u_line { width: 40px; height: 4px; margin: 20px 0 50px 0; background: black; }
+	div.u_work_02 div.u_inner_wrap_02 { position: relative; top: 0; left: 0; z-index: 20; width: 70%; height: auto; text-align: left; }
+	div.u_work_02 div.u_inner_wrap_02 p.u_sub_title { width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.u_work_02 div.u_inner_wrap_02 p.u_sub_title:nth-of-type(3) { position: absolute; top: 0%; left: 76%; width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.u_work_02 div.u_inner_wrap_02 p.u_sub_title:nth-of-type(4) { position: absolute; top: 56.5%; left: 76%; width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+
+	div.u_work_02 div.u_inner_wrap_02 div.concept { position: relative; top: 0; left: 2%; width: 80%; height: 100px; margin: 20px 0 50px 0; text-align: left; font-weight: bold; }
+	div.u_work_02 div.u_inner_wrap_02 div.concept > div.concept_01 { display: inline-block; width: 100px; height: 100%; padding-top: 37px; margin-left: -20px; color: #4DA6FF; border: 2px solid #4DA6FF; border-radius: 5000px; text-align: center; }
+	div.u_work_02 div.u_inner_wrap_02 div.concept > div.concept_02 { display: inline-block; width: 100px; height: 100%; padding-top: 37px; margin-left: -20px; color: #A3EBF8; border: 2px solid #A3EBF8; border-radius: 5000px; text-align: center; }
+	div.u_work_02 div.u_inner_wrap_02 div.concept > div.concept_03 { display: inline-block; width: 100px; height: 100%; padding-top: 37px; margin-left: -20px; color: #91A9FF; border: 2px solid #91A9FF; border-radius: 5000px; text-align: center; }
+	
+	
+	div.u_work_02 div.u_inner_wrap_02 div.color { position: relative; top: 0; left: 0; width: 100%; height: auto; margin: 20px 0; font-weight: bold; text-align: left; }
+
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_01 { display: inline-block; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_02 { display: inline-block; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_03 { display: inline-block; }
+
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_01 > p.circle { display: inline-block; width: 80px; height: 100%; padding-top: 80px; margin-right: 5px;  background: #4DA6FF; border-radius: 5000px; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_02 > p.circle { display: inline-block; width: 80px; height: 100%; padding-top: 80px; margin-right: 5px; background: #D3EBF8; border-radius: 5000px; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_03 > p.circle { display: inline-block; width: 80px; height: 100%; padding-top: 80px; background: #91A9FF; border-radius: 5000px; }
+
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_01 > p:nth-of-type(2) { margin-top: 10px; padding-left: 10px; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_02 > p:nth-of-type(2) { margin-top: 10px; padding-left: 10px; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_03 > p:nth-of-type(2) { margin-top: 10px; padding-left: 10px; }
+	
+	
+	div.u_work_02 div.u_inner_wrap_02 div.font { position: absolute; top: 0%; left: 76%; width: 73%; height: auto; margin: 20px 0; color: #ggg; font-weight: bold; text-align: left; }
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_sub { display: inline-block; margin-top: 20px; margin-left: 15px; font-size: 2.5em; }
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_txt { display: block; font-size: 1.25em; }
+	
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_sub:nth-of-type(1) { margin-left: 0; font-family: "NotoSansKR-Bold"}
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_sub:nth-of-type(2) { font-family: "Montserrat-Bold"}
+
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_txt:nth-of-type(4) { font-family: "NotoSansKR-Bold"}
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_txt:nth-of-type(5) { font-family: "Montserrat-Bold"}
+	
+	div.u_work_02 div.u_inner_wrap_02 div.logo { position: absolute; top: 60%; left: 76%; width: 73%; height: auto; margin: 20px 0; font-weight: bold; text-align: left; }
+	div.u_work_02 div.u_inner_wrap_02 div.logo img { float: left; width: 140px; height: 104px; margin-top: 20px; margin-right: 20px; object-fit: cover; }
+	div.u_work_02 div.u_inner_wrap_02 div.logo p { margin-top: 20px; }
+
+	div.u_work_03 { position: relative; top: 0; left: 0; width: 100%; height: 65vh; margin: 0 auto; padding: 20px; }
+	div.u_work_03 h2.u_title { font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.u_work_03 div.u_inner_wrap_03 { position: relative; top: 0; left: 0; z-index: 20; width: 100%; height: 100%; text-align: left; }
+	div.u_work_03 div.u_inner_wrap_03 p.u_sub_title { width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.u_work_03 div.u_inner_wrap_03 img.desk { position: absolute; top: 30%; left: 0; width: 600px; height: 360px; object-fit: cover; }
+	div.u_work_03 div.u_inner_wrap_03 p.u_sub_title { margin-top: 30px; font-family: "Poppins-Bold"; font-size: 1.5em; }
+	div.u_work_03 div.u_inner_wrap_03 p:nth-of-type(2) { width: 100%; padding-top: 20px; margin-bottom: 100px; font-size: 1.125em; }
+	
+	
+	
+	
+	
+/* ------------------------------ Mobile (End) ------------------------------ */
+}
+
+/* 
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@   MOBILE	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+/* ------------------------------ TABLET (Start) ------------------------------ */
+	
+	body { background: #333; }
+
+	section.visual { width: 100%; height: 50vh; }
+	section.visual > p { padding: 5vw; color: #fff; font-family:"Poppins-Bold"; font-size: 100px; line-height: 0.9; }
+	img { object-fit: cover; }
+	.parent {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(5, 1fr) 2fr;
+		grid-column-gap: 1.5vw;
+		grid-row-gap: 1.5vw;
+		
+		width: 95vw;
+		height: 150vh; 
+		
+		margin: 0 auto;
+		padding-bottom: 1vw;
+	}
+	
+	.parent > div { overflow: hidden; border-radius: 0.5vw; }
+	
+	
+	.child_01 { grid-area: 1 / 1 / 2 / 2; }
+	.child_02 { grid-area: 1 / 2 / 2 / 3; }
+	.child_03 { grid-area: 2 / 1 / 3 / 2; }
+	.child_04 { grid-area: 2 / 2 / 3 / 3; }
+	.child_05 { grid-area: 1 / 3 / 3 / 4; }
+	.child_06 { grid-area: 3 / 1 / 5 / 3; }
+	.child_07 { grid-area: 3 / 3 / 4 / 4; background: #f4df2c; }
+	.child_08 { grid-area: 5 / 2 / 6 / 4; background: lightsalmon; }
+	.child_09 { grid-area: 5 / 1 / 6 / 2; background: #459b34;}
+	.child_10 { grid-area: 5 / 3 / 6 / 4; }
+	.child_11 { grid-area: 6 / 1 / 7 / 2; background: #fff; }
+	.child_12 { grid-area: 6 / 2 / 7 / 4; background: #fff; }
+
+	div.child_wrap { width: 100%; height: 100%; }
+	div.child_wrap_inner { width: 100%; height: 100%; }
+	
+	div.child_wrap_02 { grid-area: 1 / 3 / 3 / 4; }
+	div.child_wrap_03 { grid-area: 5 / 2 / 6 / 4; }
+
+	/* photoshop */
+	div.child_01 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_01 div.text_wrap { position: absolute; left: 10px; top: 10px; width: 90%; }
+	div.child_01 div.text_wrap p.title { margin-bottom: 0.1em; font-family:"Poppins-Bold"; font-size: 3.5vw; color: #333; line-height: 1.2; }
+	div.child_01 div.text_wrap p.title span { color: #264BCC; }
+	div.child_01 div.text_wrap p.desc { display: none; font-family:"Poppins-Regular"; font-size: 1.6vw; color: #666; line-height: 1.2; }
+	div.child_01 div.text_wrap p.second_title { position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 1.5vw; color: #333; line-height: 1.2; color: #264bcc; }
+	div.child_01 div.text_wrap p.second_desc { position: absolute; left: 20px; top: 3.3em; font-family:"NotoSansKR-Regular"; font-size: 0.8vw; color: #666; line-height: 1.2; }
+	
+	/* photoshop sub */
+	div.child_01_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_01_sub div.text_wrap { position: absolute; left: 10px; top: 10px; width: 83%; }
+	div.child_01_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 3vw; color: #333; line-height: 1.2; color: #264bcc; }
+	div.child_01_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 2.5em; font-family:"NotoSansKR-Regular"; font-size: 1.8vw; color: #666; line-height: 1.2; }
+	
+	/* photoshop hover */
+	div.child_wrap { perspective: 1100px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_01 { backface-visibility: hidden; }
+	div.child_01_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_01_sub img { transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	/* html */
+	div.child_02 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_02 div.text_wrap { position: absolute; left: 10px; top: 10px; width: 80% }
+	div.child_02 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 4vw; color: #333; line-height: 1.2; }
+	div.child_02 div.text_wrap p.title span { letter-spacing: -0.05em; }
+	div.child_02 div.text_wrap p.desc { display: none; font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1.4; }
+	
+	/* html sub */
+	div.child_02_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_02_sub div.text_wrap { position: absolute; left: 10px; top: 10px; width: 60%; }
+	div.child_02_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 3vw; color: #333; line-height: 1.2; }
+	div.child_02_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 2.5em; width: 90%; font-family:"NotoSansKR-Regular"; font-size: 1.8vw; color: #666; line-height: 1.15; }
+	div.child_02_sub div.text_wrap p.desc:nth-of-type(2) { position: absolute; top: 8em; }
+	
+	/* html hover */
+	div.child_wrap { perspective: 1100px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_02 { backface-visibility: hidden; }
+	div.child_02_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* javascript */
+	div.child_03 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_03 div.text_wrap { position: absolute; left: 10px; top: 10px; width: 80% }
+	div.child_03 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 4vw; color: #009b93; line-height: 1.2; }
+	div.child_03 div.text_wrap p.title span { letter-spacing: -0.05em; }
+	div.child_03 div.text_wrap p.desc { display: none; font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1.4; }
+
+	/* javascript sub */
+	div.child_03_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_03_sub div.text_wrap { position: absolute; left: 10px; top: 10px; width: 60%; }
+	div.child_03_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 3vw; color: #009b93; line-height: 1.2; }
+	div.child_03_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 2.5em; width: 95%; font-family:"NotoSansKR-Regular"; font-size: 1.8vw; color: #666; line-height: 1.1; }
+	div.child_03_sub div.text_wrap p:nth-of-type(3) { position: absolute; top: 9.5em; }
+	
+	/* javascript hover */
+	div.child_wrap { perspective: 1100px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_03 { backface-visibility: hidden; }
+	div.child_03_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* illustrator */
+	div.child_04 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_04 div.text_wrap { position: absolute; left: 10px; top: 10px; width: 80% }
+	div.child_04 div.text_wrap p.title { margin-bottom: 0.4em; font-family:"Poppins-bold"; font-size: 4vw; color: #333; line-height: 1.2; }
+	div.child_04 div.text_wrap p.title span:nth-of-type(1) { color: #b438d2; }
+	div.child_04 div.text_wrap p.title span:last-of-type { color: #264bcc; }
+	div.child_04 div.text_wrap p.desc { display: none; font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1; }
+
+	/* illustrator sub */
+	div.child_04_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_04_sub div.text_wrap { position: absolute; left: 10px; top: 10px; width: 100%; }
+	div.child_04_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 3vw; color: #b438d2; line-height: 1.2; }
+	div.child_04_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 2.5em; width: 88%; font-family:"NotoSansKR-Regular"; font-size: 1.8vw; color: #666; line-height: 1.1; }
+	
+	/* illustrator hover */
+	div.child_wrap { perspective: 1000px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_04 { backface-visibility: hidden; }
+	div.child_04_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_04_sub img { transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* attitude */
+	div.child_wrap_02 { width: 100%; height: 100%; }
+	div.child_wrap_inner_02 { width: 100%; height: 100%; }
+	div.child_05 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_05 div.text_wrap { position: absolute; left: 10px; top: 10px; width: 80%; }
+	div.child_05 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 4vw; color: #333; }
+	div.child_05 div.text_wrap p.title > span { color: #d41818; }
+	div.child_05 div.text_wrap p.desc { display: none; font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1.5; }
+
+	/* attitude sub */
+	div.child_05_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_05_sub div.text_wrap { position: absolute; left: 10px; top: 10px; width: 90%; }
+	div.child_05_sub div.text_wrap p.title { position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 3vw; color: #d41818; line-height: 1.2; }
+	div.child_05_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 2.5em; width: 90%; font-family:"NotoSansKR-Regular"; font-size: 1.8vw; color: #666; line-height: 1.1; }
+	
+	/* attitude hover */
+	div.child_wrap_02 { perspective: 1000px; }
+	div.child_wrap_inner_02 { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_05 { backface-visibility: hidden; }
+	div.child_05_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_wrap_02:hover div.child_wrap_inner_02 { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* profile */
+	div.child_06 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_06 div.text_wrap { position: absolute; top: 8vw; left: 3vw; width: 90%; height: 65%; }
+	div.child_06 div.text_wrap p.title { font-family:"Poppins-Bold"; font-size: 6vw; color: white; line-height: 1.5; }
+	div.child_06 div.text_wrap p.center_line { width: 10vw; height: 5px; margin: 20px 0 30px 0; background: #ddd; }
+	div.child_06 div.text_wrap p.desc { font-family:"Poppins-Bold"; font-size: 5vw; color: #fff; line-height: 1.5; }
+	
+	/* break */
+	div.child_07 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_07 div.text_wrap { position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; }
+	div.child_07 div.text_wrap img { width: 13.54vw; height: 8.95vw; margin-top: 3%; }
+	div.child_07 div.text_wrap p.title { float: right; margin-top: 1vw; margin-right: 7vw; font-family:"Poppins-Bold"; font-size: 2.8vw; color: black; line-height: 1.5; }
+	div.child_07 div.text_wrap p.title span:nth-of-type(1) { color: #1399c8; }
+	div.child_07 div.text_wrap p.title span:nth-of-type(2) { color: #2db84a; }
+	div.child_07 div.text_wrap p.title span:last-of-type { color: #d41818; }
+	
+	/* coding */
+	div.child_wrap_03 { width: 100%; height: 100%; }
+	div.child_wrap_inner_03 { width: 100%; height: 100%; }
+	div.child_08 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_08 div.text_wrap { position: absolute; top: 1.5vw; left: 28vw; width: 55%; }
+	div.child_08 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 4vw; color: #fff; line-height: 1.2; }
+	div.child_08 div.text_wrap p.title span { color: #264bcc; }
+	div.child_08 div.text_wrap p.desc { font-family:"Poppins-Regular"; font-size: 2.084vw; color: #fff; line-height: 1.3; }
+
+	/* coding sub */
+	div.child_08_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; }
+	div.child_08_sub div.text_wrap { position: absolute; top: 1vw; left: 26vw; width: 63%; }
+	div.child_08_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; font-family: "NotoSansKR-Bold"; font-size: 3vw; color: #fff; line-height: 1.2; }
+	div.child_08_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 2.2em; width: 90%; font-family:"NotoSansKR-Regular"; font-size: 2vw; color: #fff; line-height: 1.2; }
+	div.child_08_sub div.text_wrap p.desc:nth-of-type(2) { position: absolute; top: 6.5em; }
+	
+	/* coding hover */
+	div.child_wrap_03 { perspective: 1000px; }
+	div.child_wrap_inner_03 { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_08 { backface-visibility: hidden; }
+	div.child_08_sub { backface-visibility: hidden; transform: rotateX(180deg); }
+	div.child_wrap_03:hover div.child_wrap_inner_03 { display: block; transform: rotateX(180deg); transition: transform 0.7s; }
+	
+	
+	/* experience */
+	div.child_09 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_09 div.text_wrap { position: absolute; top: 10px; left: 10px; width: 95%; }
+	div.child_09 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 2.8vw; color: #111; line-height: 1.2; }
+	div.child_09 div.text_wrap p.title span:nth-of-type(1) { color: #f12e1a; }
+	div.child_09 div.text_wrap p.title span:last-of-type { color: #042ee1; }
+	div.child_09 div.text_wrap p.desc { font-family:"Poppins-Regular"; font-size: 2vw; color: #fff; line-height: 1.1; }
+	
+	
+	/* CONTACT */
+	div.child_10 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_10 div.text_wrap { position: absolute; top: 10px; left: 10px; width: 100%; }
+	div.child_10 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 4vw; color: #2CC; line-height: 1.2; }
+	div.child_10 div.text_wrap p.desc { display: none; font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1.3; }
+
+	/* CONTACT sub */
+	div.child_10_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_10_sub div.text_wrap { position: absolute; left: 10px; top: 10px; width: 80%; }
+	div.child_10_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 3.5vw; color: #2CC; line-height: 1.2; }
+	div.child_10_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 3em; width: 80%; font-family:"NotoSansKR-Regular"; font-size: 1.8vw; color: #666; line-height: 1.2; }
+	
+	/* CONTACT hover */
+	div.child_wrap { perspective: 1000px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_10 { backface-visibility: hidden; }
+	div.child_10_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* MGL */
+	div.child_11 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_11 > img { width: 100%; height: 100%; object-fit: cover; }
+	div.child_11 div.text_wrap { position: absolute; bottom: 0; right: 0; padding: 1vw 1.5vw; background: rgba(80, 80, 80, 0.8); color: #fff; }
+	div.child_11 div.text_wrap p { text-align: right; font-family:"Poppins-Medium"; font-size: 1.75vw; }
+	
+	
+	/* Under the sea */
+	div.child_12 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_12 > img { width: 100%; height: 100%; object-fit: cover; }
+	div.child_12 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_12 div.text_wrap { position: absolute; bottom: 0; right: 0; padding: 1vw 1.5vw; background: rgba(55, 161, 170, 0.8); color: #fff; }
+	div.child_12 div.text_wrap p { text-align: right; font-family:"Poppins-Medium"; font-size: 1.75vw; }
+	
+	
+	/*=================*/
+	
+	div.popup_wrap { display: none; position: fixed; left: 0; top: 0; z-index: 110; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.5); }
+	
+	div.popup_wrap button.closed { position: fixed; right: 30px; top: 30px; width: 30px; height: 30px; }
+	div.popup_wrap button.closed > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+	
+	div.popup_wrap div.inner { display: block; position: fixed; left: 50%; top: 50%; width: 85vw; height: 85vh; padding: 30px; border-radius: 0.5vw; background: white; transform: translate(-50%, -50%); text-align: center; }
+	
+	div.popup_wrap div.inner div.contents { overflow-x: hidden; overflow-y: auto; width: 100%; height: 100%; }
+	div.popup_wrap div.inner div.contents::-webkit-scrollbar { display: none; }
+	div.popup_wrap div.inner div.contents { -ms-overflow-style: none; scrollbar-width: none; }
+	
+	div.popup_wrap div.inner div.contents div.profile { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info { position: relative; top: 0; left: 0; width: 100%; height: 50vh; font-family: "Poppins-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info p.info_prof { color: #333; font-family: "Poppins-Bold"; font-size: 3vw; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info p.info_line {  position: relative; top: 0; left: 50%; width: 40px; height: 5px; margin-bottom: 3vh; background: #d41818; transform: translateX(-50%); }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info p.i_sub { font-family: "Poppins-Medium"; font-size: 2.7vw; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info p { font-size: 2vw; }
+	
+	/* ======== 팝업 기본 설정 ========= */
+	
+	
+	/* profile pop */
+	div.popup_wrap div.inner div.contents div.profile ul.my_info:nth-of-type(1) { height: 27vh; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.persona { display: inline-block; position: absolute; top: 33%; left: 10%; text-align: left; line-height: 1.4; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.persona p:nth-of-type(2) { padding-top: 1%; font-family: "NotoSansKR-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.persona p:nth-of-type(2) > span { font-family: "Poppins-Regular"; }
+	
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education { display: inline-block; position: absolute; top: 23%; right: 7%; text-align: left; line-height: 1.4; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education span { font-family: "Poppins-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education p:nth-of-type(2) { padding-top: 1%; font-family: "NotoSansKR-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education p:nth-of-type(3) { font-family: "NotoSansKR-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education p:nth-of-type(4) { font-family: "NotoSansKR-Regular"; }
+	
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu { position: relative; top: 0; left: 0; width: 100%; height: 50vh; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box br { display: none; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box { display: inline-block; width: 36vw; height: 36vw; margin: 1.5%; background: #fff; box-shadow: 0px 2px 10px 0px black; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box > p.line { display: none; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box > p.txt { padding: 0 10px; margin-top: 30px; font-family: "NotoSansKR-Regular"; font-size: 2.3vw; line-height: 1.5; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box > img.pop_img { width: 70px; height: 70px; margin-top: 15%; object-fit: cover; }
+	
+	
+	
+	/*=================== mgl====================== */
+	div.popup_wrap div.inner div.contents div.m_work_01 { position: relative; top: 0; left: 0; width: 100%; height: 100vh; margin: 0 auto; padding: 20px; }
+	div.popup_wrap div.inner div.contents div.m_work_01 h2.m_title { font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.popup_wrap div.inner div.contents div.m_work_01 p.m_line { width: 40px; height: 4px; margin: 20px 0 50px 0; background: black; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_inner_wrap { position: relative; top: 0; left: 0; z-index: 20; width: 100%; height: auto; text-align: left; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_inner_wrap p.m_sub_title { font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_inner_wrap p:nth-of-type(2) { width: 100%; padding-top: 20px; margin-bottom: 100px; font-size: 1em; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_inner_wrap a { padding: 18px 38px; color: #333; border: 1px solid black; font-size: 1.125em; font-weight: bold; }
+
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap { position: absolute; top: 10%; left: 0; z-index: 1; width: 100%; height: 100%; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap div.img_shadow { position: absolute; top: 82.5%; right: 21.5%; width: 83px; height: 30px; object-fit: cover; box-shadow: 0 10px 10px -8px gray; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap img:nth-of-type(1) { position: absolute; top: 50%; right: 10%; width: 512px; height: 323px; object-fit: cover; box-shadow: 0 8px 8px 8px gray; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap img:nth-of-type(2) { position: absolute; top: 65%; right: 5%; width: 270px; height: 210px; object-fit: cover; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap img:nth-of-type(3) { position: absolute; top: 71%; right: 3%; width: 112px; height: 150px; object-fit: cover; box-shadow: 8px 8px 8px 0px gray; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap img:nth-of-type(4) { position: absolute; top: 74.5%; right: 16%; width: 60px; height: 115px; object-fit: cover; box-shadow: 0px 8px 8px -8px gray; }
+	
+	
+	div.m_work_02 { position: relative; top: 0; left: 0; width: 100%; height: 70vh; margin: 0 auto; margin-top: 40px; padding: 20px; }
+	div.m_work_02 h2.m_title { font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.m_work_02 p.m_line { width: 40px; height: 4px; margin: 20px 0 50px 0; background: black; }
+	div.m_work_02 div.m_inner_wrap_02 { position: relative; top: 0; left: 0; z-index: 20; width: 70%; height: auto; text-align: left; }
+	div.m_work_02 div.m_inner_wrap_02 p.m_sub_title { width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.m_work_02 div.m_inner_wrap_02 p.m_sub_title:nth-of-type(3) { position: absolute; top: 0%; left: 76%; width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.m_work_02 div.m_inner_wrap_02 p.m_sub_title:nth-of-type(4) { position: absolute; top: 56.5%; left: 76%; width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+
+	div.m_work_02 div.m_inner_wrap_02 div.concept { position: relative; top: 0; left: 2%; width: 80%; height: 100px; margin: 20px 0 50px 0; text-align: left; font-weight: bold; }
+	div.m_work_02 div.m_inner_wrap_02 div.concept > div.concept_01 { display: inline-block; width: 100px; height: 100%; padding-top: 37px; margin-left: -20px; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 5000px; text-align: center; }
+	div.m_work_02 div.m_inner_wrap_02 div.concept > div.concept_02 { display: inline-block; width: 100px; height: 100%; padding-top: 37px; margin-left: -20px; color: #c02020; border: 2px solid #c02020; border-radius: 5000px; text-align: center; }
+	div.m_work_02 div.m_inner_wrap_02 div.concept > div.concept_03 { display: inline-block; width: 100px; height: 100%; padding-top: 37px; margin-left: -20px; border: 2px solid #888; border-radius: 5000px; text-align: center; }
+	
+	
+	div.m_work_02 div.m_inner_wrap_02 div.color { position: relative; top: 0; left: 0; width: 100%; height: auto; margin: 20px 0; font-weight: bold; text-align: left; }
+
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_01 { display: inline-block; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_02 { display: inline-block; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_03 { display: inline-block; }
+
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_01 > p.circle { display: inline-block; width: 80px; height: 100%; padding-top: 80px; margin-right: 5px;  background: #1e1e1e; border-radius: 5000px; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_02 > p.circle { display: inline-block; width: 80px; height: 100%; padding-top: 80px; margin-right: 5px; background: #c02020; border-radius: 5000px; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_03 > p.circle { display: inline-block; width: 80px; height: 100%; padding-top: 80px; background: #E8E8E8; border-radius: 5000px; }
+
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_01 > p:nth-of-type(2) { margin-top: 10px; padding-left: 10px; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_02 > p:nth-of-type(2) { margin-top: 10px; padding-left: 10px; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_03 > p:nth-of-type(2) { margin-top: 10px; padding-left: 10px; }
+	
+	
+	div.m_work_02 div.m_inner_wrap_02 div.font { position: absolute; top: 0%; left: 76%; width: 73%; height: auto; margin: 20px 0; color: #ggg; font-weight: bold; text-align: left; }
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_sub { display: inline-block; margin-top: 20px; margin-left: 15px; font-size: 2.5em; }
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_txt { display: block; font-size: 1.25em; }
+	
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_sub:nth-of-type(1) { margin-left: 0; font-family: "LibreBaskerville-Bold"}
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_sub:nth-of-type(2) { font-family: "NotoSansKR-Bold"}
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_sub:nth-of-type(3) { margin-bottom: 20px; font-family: "Montserrat-Bold" }
+
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_txt:nth-of-type(4) { font-family: "LibreBaskerville-Bold"}
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_txt:nth-of-type(5) { font-family: "NotoSansKR-Bold"}
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_txt:nth-of-type(6) { font-family: "Montserrat-Bold" }
+	
+	div.m_work_02 div.m_inner_wrap_02 div.logo { position: absolute; top: 60%; left: 76%; width: 73%; height: auto; margin: 20px 0; font-weight: bold; text-align: left; }
+	div.m_work_02 div.m_inner_wrap_02 div.logo img { float: left; width: 85px; height: 100px; margin-top: 20px; margin-right: 20px; object-fit: cover; }
+	div.m_work_02 div.m_inner_wrap_02 div.logo p { margin-top: 20px; }
+
+	div.m_work_03 { position: relative; top: 0; left: 0; width: 100%; height: 65vh; margin: 0 auto; padding: 20px; }
+	div.m_work_03 h2.m_title { font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.m_work_03 div.m_inner_wrap_03 { position: relative; top: 0; left: 0; z-index: 20; width: 100%; height: 100%; text-align: left; }
+	div.m_work_03 div.m_inner_wrap_03 p.m_sub_title { width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.m_work_03 div.m_inner_wrap_03 img.desk { position: absolute; top: 30%; left: 0; width: 600px; height: 360px; object-fit: cover; }
+	div.m_work_03 div.m_inner_wrap_03 p.m_sub_title { margin-top: 30px; font-family: "Poppins-Bold"; font-size: 1.5em; }
+	div.m_work_03 div.m_inner_wrap_03 p:nth-of-type(2) { width: 100%; padding-top: 20px; margin-bottom: 100px; font-size: 1.125em; }
+	
+	
+	
+	/* ======================Under the SEA======================= */
+	
+	div.popup_wrap div.inner div.contents div.u_work_01 { position: relative; top: 0; left: 0; width: 100%; height: 100vh; margin: 0 auto; padding: 20px; }
+	div.popup_wrap div.inner div.contents div.u_work_01 h2.u_title { color: #4DA6FF; font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.popup_wrap div.inner div.contents div.u_work_01 p.u_line { width: 40px; height: 4px; margin: 20px 0 50px 0; background: black; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_inner_wrap { position: relative; top: 0; left: 0; z-index: 20; width: 100%; height: auto; text-align: left; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_inner_wrap p.u_sub_title { font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_inner_wrap p:nth-of-type(2) { width: 100%; padding-top: 20px; margin-bottom: 100px; font-size: 1em; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_inner_wrap a { padding: 18px 38px; color: #333; border: 1px solid black; font-size: 1.125em; font-weight: bold; }
+
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap { position: absolute; top: 10%; left: 0; z-index: 1; width: 100%; height: 100%; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap div.img_shadow { position: absolute; top: 82.5%; right: 21.5%; width: 83px; height: 30px; object-fit: cover; box-shadow: 0 10px 10px -8px gray; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap img:nth-of-type(1) { position: absolute; top: 50%; right: 10%; width: 512px; height: 323px; object-fit: cover; box-shadow: 0 8px 8px 8px gray; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap img:nth-of-type(2) { position: absolute; top: 65%; right: 5%; width: 270px; height: 210px; object-fit: cover; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap img:nth-of-type(3) { position: absolute; top: 71%; right: 3%; width: 112px; height: 150px; object-fit: cover; box-shadow: 8px 8px 8px 0px gray; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap img:nth-of-type(4) { position: absolute; top: 74.5%; right: 16%; width: 60px; height: 115px; object-fit: cover; box-shadow: 0px 8px 8px -8px gray; }
+	
+	
+	div.u_work_02 { position: relative; top: 0; left: 0; width: 100%; height: 70vh; margin: 0 auto; margin-top: 40px; padding: 20px; }
+	div.u_work_02 h2.u_title { font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.u_work_02 p.u_line { width: 40px; height: 4px; margin: 20px 0 50px 0; background: black; }
+	div.u_work_02 div.u_inner_wrap_02 { position: relative; top: 0; left: 0; z-index: 20; width: 70%; height: auto; text-align: left; }
+	div.u_work_02 div.u_inner_wrap_02 p.u_sub_title { width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.u_work_02 div.u_inner_wrap_02 p.u_sub_title:nth-of-type(3) { position: absolute; top: 0%; left: 76%; width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.u_work_02 div.u_inner_wrap_02 p.u_sub_title:nth-of-type(4) { position: absolute; top: 56.5%; left: 76%; width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+
+	div.u_work_02 div.u_inner_wrap_02 div.concept { position: relative; top: 0; left: 2%; width: 80%; height: 100px; margin: 20px 0 50px 0; text-align: left; font-weight: bold; }
+	div.u_work_02 div.u_inner_wrap_02 div.concept > div.concept_01 { display: inline-block; width: 100px; height: 100%; padding-top: 37px; margin-left: -20px; color: #4DA6FF; border: 2px solid #4DA6FF; border-radius: 5000px; text-align: center; }
+	div.u_work_02 div.u_inner_wrap_02 div.concept > div.concept_02 { display: inline-block; width: 100px; height: 100%; padding-top: 37px; margin-left: -20px; color: #A3EBF8; border: 2px solid #A3EBF8; border-radius: 5000px; text-align: center; }
+	div.u_work_02 div.u_inner_wrap_02 div.concept > div.concept_03 { display: inline-block; width: 100px; height: 100%; padding-top: 37px; margin-left: -20px; color: #91A9FF; border: 2px solid #91A9FF; border-radius: 5000px; text-align: center; }
+	
+	
+	div.u_work_02 div.u_inner_wrap_02 div.color { position: relative; top: 0; left: 0; width: 100%; height: auto; margin: 20px 0; font-weight: bold; text-align: left; }
+
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_01 { display: inline-block; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_02 { display: inline-block; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_03 { display: inline-block; }
+
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_01 > p.circle { display: inline-block; width: 80px; height: 100%; padding-top: 80px; margin-right: 5px;  background: #4DA6FF; border-radius: 5000px; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_02 > p.circle { display: inline-block; width: 80px; height: 100%; padding-top: 80px; margin-right: 5px; background: #D3EBF8; border-radius: 5000px; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_03 > p.circle { display: inline-block; width: 80px; height: 100%; padding-top: 80px; background: #91A9FF; border-radius: 5000px; }
+
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_01 > p:nth-of-type(2) { margin-top: 10px; padding-left: 10px; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_02 > p:nth-of-type(2) { margin-top: 10px; padding-left: 10px; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_03 > p:nth-of-type(2) { margin-top: 10px; padding-left: 10px; }
+	
+	
+	div.u_work_02 div.u_inner_wrap_02 div.font { position: absolute; top: 0%; left: 76%; width: 73%; height: auto; margin: 20px 0; color: #ggg; font-weight: bold; text-align: left; }
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_sub { display: inline-block; margin-top: 20px; margin-left: 15px; font-size: 2.5em; }
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_txt { display: block; font-size: 1.25em; }
+	
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_sub:nth-of-type(1) { margin-left: 0; font-family: "NotoSansKR-Bold"}
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_sub:nth-of-type(2) { font-family: "Montserrat-Bold"}
+
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_txt:nth-of-type(4) { font-family: "NotoSansKR-Bold"}
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_txt:nth-of-type(5) { font-family: "Montserrat-Bold"}
+	
+	div.u_work_02 div.u_inner_wrap_02 div.logo { position: absolute; top: 60%; left: 76%; width: 73%; height: auto; margin: 20px 0; font-weight: bold; text-align: left; }
+	div.u_work_02 div.u_inner_wrap_02 div.logo img { float: left; width: 140px; height: 104px; margin-top: 20px; margin-right: 20px; object-fit: cover; }
+	div.u_work_02 div.u_inner_wrap_02 div.logo p { margin-top: 20px; }
+
+	div.u_work_03 { position: relative; top: 0; left: 0; width: 100%; height: 65vh; margin: 0 auto; padding: 20px; }
+	div.u_work_03 h2.u_title { font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.u_work_03 div.u_inner_wrap_03 { position: relative; top: 0; left: 0; z-index: 20; width: 100%; height: 100%; text-align: left; }
+	div.u_work_03 div.u_inner_wrap_03 p.u_sub_title { width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.u_work_03 div.u_inner_wrap_03 img.desk { position: absolute; top: 30%; left: 0; width: 600px; height: 360px; object-fit: cover; }
+	div.u_work_03 div.u_inner_wrap_03 p.u_sub_title { margin-top: 30px; font-family: "Poppins-Bold"; font-size: 1.5em; }
+	div.u_work_03 div.u_inner_wrap_03 p:nth-of-type(2) { width: 100%; padding-top: 20px; margin-bottom: 100px; font-size: 1.125em; }
+	
+	
+	
+	
+/* ------------------------------ TABLET (End) ------------------------------ */
+}
+
+/* 
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@   TABLET	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+
+@media screen and (min-width: 1025px) {
+/* ------------------------------ DESKTOP (Start) ------------------------------ */
+	body { background: #333; }
+
+	section.visual { width: 100%; height: 70vh; }
+	section.visual > p { padding: 5vw; color: #fff; font-family:"Poppins-Bold"; font-size: 150px; line-height: 0.9; }
+
+	.parent {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(5, 1fr);
+		grid-column-gap: 1vw;
+		grid-row-gap: 1vw;
+
+		width: 90vw;
+		height: 166.66vh; 
+
+		margin: 0 auto;
+		padding-bottom: 1vw;
+	}
+
+	.parent > div { overflow: hidden; border-radius: 0.5vw; }
+	
+	
+	.child_01 { grid-area: 1 / 1 / 2 / 2; }
+	.child_02 { grid-area: 1 / 2 / 2 / 3; }
+	.child_03 { grid-area: 2 / 1 / 3 / 2; }
+	.child_04 { grid-area: 2 / 2 / 3 / 3; }
+	.child_05 { grid-area: 1 / 3 / 3 / 4; }
+	.child_06 { grid-area: 1 / 4 / 3 / 6; }
+	.child_07 { grid-area: 3 / 1 / 4 / 2; background: #f4df2c; }
+	.child_08 { grid-area: 3 / 2 / 4 / 4; background: lightsalmon; }
+	.child_09 { grid-area: 4 / 4 / 3 / 4; background: #459b34;}
+	.child_10 { grid-area: 3 / 5 / 4 / 6; }
+	.child_11 { grid-area: 4 / 1 / 6 / 3; background: #fff; }
+	.child_12 { grid-area: 4 / 3 / 6 / 6; background: #fff; }
+
+	div.child_wrap { width: 100%; height: 100%; }
+	div.child_wrap_inner { width: 100%; height: 100%; }
+	div.child_wrap_02 { grid-area: 1 / 3 / 3 / 4; }
+	div.child_wrap_03 { grid-area: 3 / 2 / 4 / 4; }
+
+	/* photoshop */
+	div.child_01 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_01 div.text_wrap { position: absolute; left: 20px; top: 20px; width: 80% }
+	div.child_01 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-Bold"; font-size: 1.5vw; color: #333; line-height: 1.2; }
+	div.child_01 div.text_wrap p.title span { color: #264bcc; }
+	div.child_01 div.text_wrap p.desc { font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1; }
+	div.child_01 div.text_wrap p.second_title { position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 1.5vw; color: #333; line-height: 1.2; color: #264bcc; }
+	div.child_01 div.text_wrap p.second_desc { position: absolute; left: 20px; top: 3.3em; font-family:"NotoSansKR-Regular"; font-size: 0.8vw; color: #666; line-height: 1.2; }
+	
+	/* photoshop sub */
+	div.child_01_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_01_sub div.text_wrap { position: absolute; left: 20px; top: 20px; width: 80% }
+	div.child_01_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 1.5vw; color: #333; line-height: 1.2; color: #264bcc; }
+	div.child_01_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 3.3em; font-family:"NotoSansKR-Regular"; font-size: 0.8vw; color: #666; line-height: 1.2; }
+	
+	/* photoshop hover */
+	div.child_wrap { perspective: 1100px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_01 { backface-visibility: hidden; }
+	div.child_01_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_01_sub img { transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	/* html */
+	div.child_02 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_02 div.text_wrap { position: absolute; left: 20px; top: 20px; width: 80% }
+	div.child_02 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 1.5vw; color: #333; line-height: 1.2; }
+	div.child_02 div.text_wrap p.title span { letter-spacing: -0.05em; }
+	div.child_02 div.text_wrap p.desc { font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1.4; }
+	
+	/* html sub */
+	div.child_02_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_02_sub div.text_wrap { position: absolute; left: 20px; top: 20px; width: 60%; }
+	div.child_02_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 1.5vw; color: #333; line-height: 1.2; }
+	div.child_02_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 3.3em; width: 90%; font-family:"NotoSansKR-Regular"; font-size: 0.8vw; color: #666; line-height: 1.2; }
+	div.child_02_sub div.text_wrap p.desc:nth-of-type(2) { position: absolute; top: 8em; }
+	
+	/* html hover */
+	div.child_wrap { perspective: 1100px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_02 { backface-visibility: hidden; }
+	div.child_02_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* javascript */
+	div.child_03 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_03 div.text_wrap { position: absolute; left: 20px; top: 20px; width: 80% }
+	div.child_03 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 1.5vw; color: #009b93; line-height: 1.2; }
+	div.child_03 div.text_wrap p.title span { letter-spacing: -0.05em; }
+	div.child_03 div.text_wrap p.desc { font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1.4; }
+
+	/* javascript sub */
+	div.child_03_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_03_sub div.text_wrap { position: absolute; left: 20px; top: 20px; width: 60%; }
+	div.child_03_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 1.5vw; color: #009b93; line-height: 1.2; }
+	div.child_03_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 3.3em; width: 90%; font-family:"NotoSansKR-Regular"; font-size: 0.8vw; color: #666; line-height: 1.2; }
+	div.child_03_sub div.text_wrap p:nth-of-type(3) { position: absolute; top: 10em; }
+	
+	/* javascript hover */
+	div.child_wrap { perspective: 1100px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_03 { backface-visibility: hidden; }
+	div.child_03_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* illustrator */
+	div.child_04 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_04 div.text_wrap { position: absolute; left: 20px; top: 20px; width: 80% }
+	div.child_04 div.text_wrap p.title { margin-bottom: 0.4em; font-family:"Poppins-bold"; font-size: 1.5vw; color: #333; line-height: 1.2; }
+	div.child_04 div.text_wrap p.title span:nth-of-type(1) { color: #b438d2; }
+	div.child_04 div.text_wrap p.title span:last-of-type { color: #264bcc; }
+	div.child_04 div.text_wrap p.desc { font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1; }
+
+	/* illustrator sub */
+	div.child_04_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_04_sub div.text_wrap { position: absolute; left: 20px; top: 20px; width: 90%; }
+	div.child_04_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 1.5vw; color: #b438d2; line-height: 1.2; }
+	div.child_04_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 3.3em; width: 90%; font-family:"NotoSansKR-Regular"; font-size: 0.8vw; color: #666; line-height: 1.2; }
+	
+	/* illustrator hover */
+	div.child_wrap { perspective: 1000px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_04 { backface-visibility: hidden; }
+	div.child_04_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_04_sub img { transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* attitude */
+	div.child_wrap_02 { width: 100%; height: 100%; }
+	div.child_wrap_inner_02 { width: 100%; height: 100%; }
+	div.child_05 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_05 div.text_wrap { position: absolute; left: 20px; top: 20px; width: 80%; }
+	div.child_05 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 1.5vw; color: #333; }
+	div.child_05 div.text_wrap p.title > span { color: #d41818; }
+	div.child_05 div.text_wrap p.desc { font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1.5; }
+
+	/* attitude sub */
+	div.child_05_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_05_sub div.text_wrap { position: absolute; left: 20px; top: 20px; width: 86%; }
+	div.child_05_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 1.5vw; color: #d41818; line-height: 1.2; }
+	div.child_05_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 3.3em; width: 90%; font-family:"NotoSansKR-Regular"; font-size: 0.8vw; color: #666; line-height: 1.2; }
+	
+	/* attitude hover */
+	div.child_wrap_02 { perspective: 1000px; }
+	div.child_wrap_inner_02 { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_05 { backface-visibility: hidden; }
+	div.child_05_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_wrap_02:hover div.child_wrap_inner_02 { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* profile */
+	div.child_06 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_06 div.text_wrap { position: absolute; top: 5.5vw; left: 3vw; width: 100%; height: 100%; }
+	div.child_06 div.text_wrap p.title { font-family:"Poppins-Bold"; font-size: 3vw; color: white; line-height: 1.5; }
+	div.child_06 div.text_wrap p.center_line { width: 5vw; height: 5px; margin: 20px 0 30px 0; background: #ddd; }
+	div.child_06 div.text_wrap p.desc { font-family:"Poppins-Bold"; font-size: 2.5vw; color: #fff; line-height: 1.5; }
+	
+	/* break */
+	div.child_07 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_07 div.text_wrap { position: absolute; top: 0; left: 0; width: 100%; height: 100%; text-align: center; }
+	div.child_07 div.text_wrap img { width: 9vw; height: 6vw; margin-top: 8%;}
+	div.child_07 div.text_wrap p.title { font-family:"Poppins-Bold"; font-size: 1.25vw; color: black; line-height: 1.5; }
+	div.child_07 div.text_wrap p.title span:nth-of-type(1) { color: #1399c8; }
+	div.child_07 div.text_wrap p.title span:nth-of-type(2) { color: #2db84a; }
+	div.child_07 div.text_wrap p.title span:last-of-type { color: #d41818; }
+	
+	/* coding */
+	div.child_wrap_03 { width: 100%; height: 100%; }
+	div.child_wrap_inner_03 { width: 100%; height: 100%; }
+	div.child_08 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_08 div.text_wrap { position: absolute; top: 3.5vw; left: 18.5vw; width: 15vw; }
+	div.child_08 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 1.5vw; color: #fff; line-height: 1.2; }
+	div.child_08 div.text_wrap p.title span { color: #264bcc; }
+	div.child_08 div.text_wrap p.desc { font-family:"Poppins-Regular"; font-size: 0.8vw; color: #fff; line-height: 1.5; }
+
+	/* coding sub */
+	div.child_08_sub { position: absolute; top: 0%; left: 0; width: 100%; height: 100%; }
+	div.child_08_sub div.text_wrap { position: absolute; top: 2vw; left: 18.5vw; width: 50%; }
+	div.child_08_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 1.5vw; color: #fff; line-height: 1.2; }
+	div.child_08_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 3.3em; width: 90%; font-family:"NotoSansKR-Regular"; font-size: 0.8vw; color: #fff; line-height: 1.2; }
+	div.child_08_sub div.text_wrap p.desc:nth-of-type(2) { position: absolute; top: 8em; }
+	
+	/* coding hover */
+	div.child_wrap_03 { perspective: 1000px; }
+	div.child_wrap_inner_03 { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_08 { backface-visibility: hidden; }
+	div.child_08_sub { backface-visibility: hidden; transform: rotateX(180deg); }
+	div.child_wrap_03:hover div.child_wrap_inner_03 { display: block; transform: rotateX(180deg); transition: transform 0.7s; }
+	
+	
+	/* experience */
+	div.child_09 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_09 div.text_wrap { position: absolute; top: 1vw; left: 1vw; width: 100% }
+	div.child_09 div.text_wrap p.title { margin-bottom: 0.5em; font-family:"Poppins-bold"; font-size: 1.5vw; color: #111; line-height: 1.2; }
+	div.child_09 div.text_wrap p.title span:nth-of-type(1) { color: #f12e1a; }
+	div.child_09 div.text_wrap p.title span:last-of-type { color: #042ee1; }
+	div.child_09 div.text_wrap p.desc { font-family:"Poppins-Regular"; font-size: 0.8vw; color: #fff; line-height: 1.3; }
+	
+	
+	/* CONTACT */
+	div.child_10 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_10 div.text_wrap { position: absolute; top: 1vw; left: 1vw; width: 100% }
+	div.child_10 div.text_wrap p.title { margin-bottom: 0.3em; font-family:"Poppins-bold"; font-size: 1.5vw; color: #2CC; line-height: 1.2; }
+	div.child_10 div.text_wrap p.desc { font-family:"Poppins-Regular"; font-size: 0.8vw; color: #666; line-height: 1.3; }
+
+	/* CONTACT sub */
+	div.child_10_sub { position: relative; top: -100%; left: 0; width: 100%; height: 100%; background: #ddd; }
+	div.child_10_sub div.text_wrap { position: absolute; left: 20px; top: 20px; width: 80%; }
+	div.child_10_sub div.text_wrap p.title {position: absolute; left: 0; top: 0; width: 100%; height: 100%; margin-bottom: 0.3em; font-family: "NotoSansKR-Bold"; font-size: 1.5vw; color: #2CC; line-height: 1.2; }
+	div.child_10_sub div.text_wrap p.desc { position: absolute; left: 0px; top: 3.3em; width: 80%; font-family:"NotoSansKR-Regular"; font-size: 0.8vw; color: #666; line-height: 1.2; }
+	
+	/* CONTACT hover */
+	div.child_wrap { perspective: 1000px; }
+	div.child_wrap_inner { position: relative; transition: 0.7s; transform-style: preserve-3d; }
+	div.child_10 { backface-visibility: hidden; }
+	div.child_10_sub { backface-visibility: hidden; transform: rotateY(180deg); }
+	div.child_wrap:hover div.child_wrap_inner { display: block; transform: rotateY(180deg); transition: transform 0.7s; }
+	
+	
+	/* MGL */
+	div.child_11 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_11 > img { width: 100%; height: 100%; object-fit: cover; }
+	div.child_11 div.text_wrap { position: absolute; bottom: 0; right: 0; padding: 1vw 1.5vw; background: rgba(80, 80, 80, 0.8); color: #fff; }
+	div.child_11 div.text_wrap p { text-align: right; font-family:"Poppins-Medium"; font-size: 1.75vw; }
+	
+	/* Under the sea */
+	div.child_12 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_12 > img { width: 100%; height: 100%; object-fit: cover; }
+	div.child_12 { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.child_12 div.text_wrap { position: absolute; bottom: 0; right: 0; padding: 1vw 1.5vw; background: rgba(55, 161, 170, 0.8); color: #fff; }
+	div.child_12 div.text_wrap p { text-align: right; font-family:"Poppins-Medium"; font-size: 1.75vw; }
+	
+	
+	/*=================*/
+	
+	div.popup_wrap { display: none; position: fixed; left: 0; top: 0; z-index: 110; width: 100%; height: 100vh; background: rgba(0, 0, 0, 0.5); }
+	
+	div.popup_wrap button.closed { position: fixed; right: 30px; top: 30px; width: 30px; height: 30px; }
+	div.popup_wrap button.closed > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+	
+	div.popup_wrap div.inner { display: block; position: fixed; left: 50%; top: 50%; width: 85vw; height: 85vh; padding: 30px; border-radius: 0.5vw; background: white; transform: translate(-50%, -50%); text-align: center; }
+	
+	div.popup_wrap div.inner div.contents { overflow-x: hidden; overflow-y: auto; width: 100%; height: 100%; }
+	div.popup_wrap div.inner div.contents::-webkit-scrollbar { display: none; }
+	div.popup_wrap div.inner div.contents { -ms-overflow-style: none; scrollbar-width: none; }
+	
+	div.popup_wrap div.inner div.contents div.profile { position: relative; top: 0; left: 0; width: 100%; height: 100%; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info { position: relative; top: 0; left: 0; width: 100%; height: 50vh; font-family: "Poppins-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info p.info_prof { color: #333; font-family: "Poppins-Bold"; font-size: 3vw; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info p.info_line {  position: relative; top: 0; left: 50%; width: 40px; height: 5px; margin-bottom: 3vh; background: #d41818; transform: translateX(-50%); }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info p.i_sub { font-family: "Poppins-Medium"; font-size: 1.7vw; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info p { font-size: 1vw; }
+	
+	/* ======== 팝업 기본 설정 ========= */
+	
+	
+	/* profile pop */
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.persona { display: inline-block; position: absolute; top: 38%; left: 25%; text-align: left; line-height: 1.7; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.persona p:nth-of-type(2) { padding-top: 1%; font-family: "NotoSansKR-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.persona p:nth-of-type(2) > span { font-family: "Poppins-Regular"; }
+	
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education { display: inline-block; position: absolute; top: 32%; right: 20%; text-align: left; line-height: 1.7; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education span { font-family: "Poppins-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education p:nth-of-type(2) { padding-top: 1%; font-family: "NotoSansKR-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education p:nth-of-type(3) { font-family: "NotoSansKR-Regular"; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_info li.education p:nth-of-type(4) { font-family: "NotoSansKR-Regular"; }
+	
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu { position: relative; top: 0; left: 0; width: 100%; height: 50vh; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box { display: inline-block; width: 18vw; height: 20vw; margin: 1%; background: #fff; box-shadow: 0px 2px 10px 0px black; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box > p.line { position: relative; top: 0; left: 50%; width: 40px; height: 5px; margin: 3vh 0 3vh 0; background: #d41818; transform: translateX(-50%); }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box > p.txt { padding: 0 10px; font-family: "NotoSansKR-Regular"; font-size: 0.9vw; line-height: 1.5; }
+	div.popup_wrap div.inner div.contents div.profile ul.my_edu li.pop_box > img.pop_img { width: 70px; height: 70px; margin-top: 15%; object-fit: cover; }
+	
+	/*=================== mgl====================== */
+	div.popup_wrap div.inner div.contents div.m_work_01 { position: relative; top: 0; left: 0; width: 100%; height: 76vh; margin: 0 auto; padding: 20px; }
+	div.popup_wrap div.inner div.contents div.m_work_01 h2.m_title { font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.popup_wrap div.inner div.contents div.m_work_01 p.m_line { width: 40px; height: 4px; margin: 20px 0 50px 0; background: black; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_inner_wrap { position: relative; top: 0; left: 0; z-index: 20; width: 63%; height: auto; text-align: left; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_inner_wrap p.m_sub_title { font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_inner_wrap p:nth-of-type(2) { width: 60%; padding-top: 20px; margin-bottom: 100px; font-size: 1em; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_inner_wrap a { padding: 18px 38px; color: #333; border: 1px solid black; font-size: 1.125em; font-weight: bold; }
+
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap { position: absolute; top: 10%; left: 0; z-index: 1; width: 100%; height: 85%; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap div.img_shadow { position: absolute; top: 79.7%; right: 13%; width: 83px; height: 30px; object-fit: cover; box-shadow: 0 10px 10px -8px gray; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap img:nth-of-type(1) { position: absolute; top: 0; right: 10%; width: 769px; height: 485px; object-fit: cover; box-shadow: 0 8px 8px 8px gray; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap img:nth-of-type(2) { position: absolute; top: 50%; right: 5%; width: 270px; height: 210px; object-fit: cover; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap img:nth-of-type(3) { position: absolute; top: 60%; right: 3%; width: 112px; height: 150px; object-fit: cover; box-shadow: 8px 8px 8px 0px gray; }
+	div.popup_wrap div.inner div.contents div.m_work_01 div.m_image_wrap img:nth-of-type(4) { position: absolute; top: 66%; right: 8%; width: 60px; height: 115px; object-fit: cover; box-shadow: 0px 8px 8px -8px gray; }
+	
+	
+	div.m_work_02 { position: relative; top: 0; left: 0; width: 100%; height: 75vh; margin: 0 auto; padding: 20px; }
+	div.m_work_02 h2.m_title { font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.m_work_02 p.m_line { width: 40px; height: 4px; margin: 20px 0 50px 0; background: black; }
+	div.m_work_02 div.m_inner_wrap_02 { position: relative; top: 0; left: 0; z-index: 20; width: 70%; height: auto; text-align: left; }
+	div.m_work_02 div.m_inner_wrap_02 p.m_sub_title { width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.m_work_02 div.m_inner_wrap_02 p.m_sub_title:nth-of-type(3) { position: absolute; top: 0%; left: 60%; width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.m_work_02 div.m_inner_wrap_02 p.m_sub_title:nth-of-type(4) { position: absolute; top: 56.5%; left: 60%; width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+
+	div.m_work_02 div.m_inner_wrap_02 div.concept { position: relative; top: 0; left: 1.5%; width: 50%; height: 150px; margin: 20px 0 50px 0; text-align: left; font-weight: bold; }
+	div.m_work_02 div.m_inner_wrap_02 div.concept > div.concept_01 { display: inline-block; width: 150px; height: 100%; padding-top: 60px; margin-left: -20px; color: #1e1e1e; border: 2px solid #1e1e1e; border-radius: 5000px; text-align: center; }
+	div.m_work_02 div.m_inner_wrap_02 div.concept > div.concept_02 { display: inline-block; width: 150px; height: 100%; padding-top: 60px; margin-left: -20px; color: #c02020; border: 2px solid #c02020; border-radius: 5000px; text-align: center; }
+	div.m_work_02 div.m_inner_wrap_02 div.concept > div.concept_03 { display: inline-block; width: 150px; height: 100%; padding-top: 60px; margin-left: -20px; border: 2px solid #888; border-radius: 5000px; text-align: center; }
+	
+	
+	div.m_work_02 div.m_inner_wrap_02 div.color { position: relative; top: 0; left: 0; width: 100%; height: auto; margin: 20px 0; font-weight: bold; text-align: left; }
+
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_01 { display: inline-block; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_02 { display: inline-block; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_03 { display: inline-block; }
+
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_01 > p.circle { display: inline-block; width: 100px; height: 100%; padding-top: 100px; margin-right: 15px;  background: #1e1e1e; border-radius: 5000px; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_02 > p.circle { display: inline-block; width: 100px; height: 100%; padding-top: 100px; margin-right: 15px; background: #c02020; border-radius: 5000px; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_03 > p.circle { display: inline-block; width: 100px; height: 100%; padding-top: 100px; background: #E8E8E8; border-radius: 5000px; }
+
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_01 > p:nth-of-type(2) { margin-top: 10px; padding-left: 15px; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_02 > p:nth-of-type(2) { margin-top: 10px; padding-left: 15px; }
+	div.m_work_02 div.m_inner_wrap_02 div.color > div.c_shape_03 > p:nth-of-type(2) { margin-top: 10px; padding-left: 15px; }
+	
+	
+	div.m_work_02 div.m_inner_wrap_02 div.font { position: absolute; top: 0%; left: 60%; width: 50%; height: auto; margin: 20px 0; color: #ggg; font-weight: bold; text-align: left; }
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_sub { display: inline-block; margin-top: 20px; margin-left: 15px; font-size: 2.5em; }
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_txt { display: block; font-size: 1.25em; }
+	
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_sub:nth-of-type(1) { margin-left: 0; font-family: "LibreBaskerville-Bold"}
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_sub:nth-of-type(2) { font-family: "NotoSansKR-Bold"}
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_sub:nth-of-type(3) { margin-bottom: 20px; font-family: "Montserrat-Bold" }
+
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_txt:nth-of-type(4) { font-family: "LibreBaskerville-Bold"}
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_txt:nth-of-type(5) { font-family: "NotoSansKR-Bold"}
+	div.m_work_02 div.m_inner_wrap_02 div.font p.font_txt:nth-of-type(6) { font-family: "Montserrat-Bold" }
+	
+	div.m_work_02 div.m_inner_wrap_02 div.logo { position: absolute; top: 60%; left: 60%; width: 50%; height: auto; margin: 20px 0; color: #ggg; font-weight: bold; text-align: left; }
+	div.m_work_02 div.m_inner_wrap_02 div.logo img { float: left; width: 85px; height: 100px; margin-top: 20px; margin-right: 20px; object-fit: cover; }
+	div.m_work_02 div.m_inner_wrap_02 div.logo p { margin-top: 20px; }
+	
+	div.m_work_03 { position: relative; top: 0; left: 0; width: 100%; height: 76vh; margin: 0 auto; padding: 20px; }
+	div.m_work_03 h2.m_title { font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.m_work_03 div.m_inner_wrap_03 { position: relative; top: 0; left: 0; z-index: 20; width: 100%; height: 100%; text-align: left; }
+	div.m_work_03 div.m_inner_wrap_03 p.m_sub_title { width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.m_work_03 div.m_inner_wrap_03 img.desk { position: absolute; top: 0; right: 10%; width: 1035px; height: 604px; object-fit: cover; }
+	div.m_work_03 div.m_inner_wrap_03 p.m_sub_title { margin-top: 30px; font-family: "Poppins-Bold"; font-size: 1.5em; }
+	div.m_work_03 div.m_inner_wrap_03 p:nth-of-type(2) { width: 30%; padding-top: 20px; margin-bottom: 100px; font-size: 1.125em; }
+	
+	
+	/* ======================Under the SEA======================= */
+	
+	div.popup_wrap div.inner div.contents div.u_work_01 { position: relative; top: 0; left: 0; width: 100%; height: 76vh; margin: 0 auto; padding: 20px; }
+	div.popup_wrap div.inner div.contents div.u_work_01 h2.u_title { color: #4da6ff; font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.popup_wrap div.inner div.contents div.u_work_01 p.u_line { width: 40px; height: 4px; margin: 20px 0 50px 0; background: black; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_inner_wrap { position: relative; top: 0; left: 0; z-index: 20; width: 63%; height: auto; text-align: left; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_inner_wrap p.u_sub_title { font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_inner_wrap p:nth-of-type(2) { width: 60%; padding-top: 20px; margin-bottom: 100px; font-size: 1em; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_inner_wrap a { padding: 18px 38px; color: #333; border: 1px solid black; font-size: 1.125em; font-weight: bold; }
+
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap { position: absolute; top: 10%; left: 0; z-index: 1; width: 100%; height: 85%; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap div.img_shadow { position: absolute; top: 79.7%; right: 9.5%; width: 6.8%; height: 5%; object-fit: cover; box-shadow: 0 15px 15px -8px gray; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap img:nth-of-type(1) { position: absolute; top: 0; right: 10%; width: 769px; height: 485px; object-fit: cover; box-shadow: 0 8px 8px 8px gray; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap img:nth-of-type(2) { position: absolute; top: 50%; right: 5%; width: 270px; height: 210px; object-fit: cover; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap img:nth-of-type(3) { position: absolute; top: 60%; right: 3%; width: 112px; height: 150px; object-fit: cover; box-shadow: 8px 8px 8px 0px gray; }
+	div.popup_wrap div.inner div.contents div.u_work_01 div.u_image_wrap img:nth-of-type(4) { position: absolute; top: 66%; right: 8%; width: 60px; height: 115px; object-fit: cover; box-shadow: 0px 13px 13px -8px gray; }
+	
+	
+	div.u_work_02 { position: relative; top: 0; left: 0; width: 100%; height: 76vh; margin: 0 auto; padding: 20px; }
+	div.u_work_02 h2.u_title { font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.u_work_02 p.u_line { width: 40px; height: 4px; margin: 20px 0 50px 0; background: black; }
+	div.u_work_02 div.u_inner_wrap_02 { position: relative; top: 0; left: 0; z-index: 20; width: 70%; height: auto; text-align: left; }
+	div.u_work_02 div.u_inner_wrap_02 p.u_sub_title { width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.u_work_02 div.u_inner_wrap_02 p.u_sub_title:nth-of-type(3) { position: absolute; top: 0%; left: 60%; width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.u_work_02 div.u_inner_wrap_02 p.u_sub_title:nth-of-type(4) { position: absolute; top: 56.5%; left: 60%; width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+
+	div.u_work_02 div.u_inner_wrap_02 div.concept { position: relative; top: 0; left: 1.5%; width: 50%; height: 150px; margin: 20px 0 50px 0; text-align: left; font-weight: bold; }
+	div.u_work_02 div.u_inner_wrap_02 div.concept > div.concept_01 { display: inline-block; width: 150px; height: 100%; padding-top: 60px; margin-left: -20px; color: #4da6ff; border: 2px solid #4da6ff; border-radius: 5000px; text-align: center; }
+	div.u_work_02 div.u_inner_wrap_02 div.concept > div.concept_02 { display: inline-block; width: 150px; height: 100%; padding-top: 60px; margin-left: -20px; color: #a3ebf8; border: 2px solid #a3ebf8; border-radius: 5000px; text-align: center; }
+	div.u_work_02 div.u_inner_wrap_02 div.concept > div.concept_03 { display: inline-block; width: 150px; height: 100%; padding-top: 60px; margin-left: -20px; color: #91a9ff; border: 2px solid #91a9ff;; border-radius: 5000px; text-align: center; }
+	
+	
+	div.u_work_02 div.u_inner_wrap_02 div.color { position: relative; top: 0; left: 0; width: 100%; height: auto; margin: 20px 0; font-weight: bold; text-align: left; }
+
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_01 { display: inline-block; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_02 { display: inline-block; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_03 { display: inline-block; }
+
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_01 > p.circle { display: inline-block; width: 100px; height: 100%; padding-top: 100px; margin-right: 15px;  background: #4da6ff; border-radius: 5000px; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_02 > p.circle { display: inline-block; width: 100px; height: 100%; padding-top: 100px; margin-right: 15px; background: #d3ebf8; border-radius: 5000px; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_03 > p.circle { display: inline-block; width: 100px; height: 100%; padding-top: 100px; background: #91a9ff; border-radius: 5000px; }
+
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_01 > p:nth-of-type(2) { margin-top: 10px; padding-left: 15px; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_02 > p:nth-of-type(2) { margin-top: 10px; padding-left: 14px; }
+	div.u_work_02 div.u_inner_wrap_02 div.color > div.c_shape_03 > p:nth-of-type(2) { margin-top: 10px; padding-left: 16px; }
+	
+	
+	div.u_work_02 div.u_inner_wrap_02 div.font { position: absolute; top: 0%; left: 60%; width: 50%; height: auto; margin: 20px 0; color: #ggg; font-weight: bold; text-align: left; }
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_sub { display: inline-block; margin-top: 20px; margin-left: 15px; font-size: 2.5em; }
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_txt { display: block; font-size: 1.25em; }
+	
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_sub:nth-of-type(1) { margin-left: 0; font-family: "NotoSansKR-Bold"}
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_sub:nth-of-type(2) { margin-bottom: 20px; font-family: "Montserrat-Bold" }
+
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_txt:nth-of-type(4) { font-family: "NotoSansKR-Bold"}
+	div.u_work_02 div.u_inner_wrap_02 div.font p.font_txt:nth-of-type(5) { font-family: "Montserrat-Bold" }
+	
+	div.u_work_02 div.u_inner_wrap_02 div.logo { position: absolute; top: 60%; left: 60%; width: 50%; height: auto; margin: 20px 0; color: #ggg; font-weight: bold; text-align: left; }
+	div.u_work_02 div.u_inner_wrap_02 div.logo img { float: left; width: 140px; height: 104px; margin-top: 20px; margin-right: 20px; object-fit: cover; }
+	div.u_work_02 div.u_inner_wrap_02 div.logo p { margin-top: 20px; }
+	
+	
+	div.u_work_03 { position: relative; top: 0; left: 0; width: 100%; height: 76vh; margin: 0 auto; padding: 20px; }
+	div.u_work_03 h2.u_title { color: #4da6ff; font-family: "Poppins-Bold"; font-size: 2em; text-align: left; }
+	div.u_work_03 div.u_inner_wrap_03 { position: relative; top: 0; left: 0; z-index: 20; width: 100%; height: 100%; text-align: left; }
+	div.u_work_03 div.u_inner_wrap_03 p.u_sub_title { width: 50%; height: auto; font-family: "Poppins-Bold"; font-size: 1.25em; }
+	div.u_work_03 div.u_inner_wrap_03 img.desk { position: absolute; top: 0; right: 10%; width: 1035px; height: 604px; object-fit: cover; }
+	div.u_work_03 div.u_inner_wrap_03 p.u_sub_title { margin-top: 30px; font-family: "Poppins-Bold"; font-size: 1.5em; }
+	div.u_work_03 div.u_inner_wrap_03 p:nth-of-type(2) { width: 30%; padding-top: 20px; margin-bottom: 100px; font-size: 1.125em; }
+	
+	
+/* ------------------------------ DESKTOP (End) ------------------------------ */
+}
+
+/* 
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@   DESKTOP	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
