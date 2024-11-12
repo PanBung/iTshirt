@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+
+/* ------------------------------ FONTFACE (start) ------------------------------ */
+
+/* noto-sans-kr-regular - latin_korean */
+@font-face {
+	font-family: 'NotoSansKR-Regular';
+	src: url('../font/noto-sans-kr-v27-latin_korean-regular.eot'); /* IE9 Compat Modes */
+	src: local('NotoSansKR-Regular'),
+		url('../font/noto-sans-kr-v27-latin_korean-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../font/noto-sans-kr-v27-latin_korean-regular.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../font/noto-sans-kr-v27-latin_korean-regular.woff') format('woff'), /* Modern Browsers */
+		url('../font/noto-sans-kr-v27-latin_korean-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../font/noto-sans-kr-v27-latin_korean-regular.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-kr-500 - latin_korean */
+@font-face {
+	font-family: 'NotoSansKR-Medium';
+	src: url('../font/noto-sans-kr-v27-latin_korean-500.eot'); /* IE9 Compat Modes */
+	src: local('NotoSansKR-Medium'),
+		url('../font/noto-sans-kr-v27-latin_korean-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../font/noto-sans-kr-v27-latin_korean-500.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../font/noto-sans-kr-v27-latin_korean-500.woff') format('woff'), /* Modern Browsers */
+		url('../font/noto-sans-kr-v27-latin_korean-500.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../font/noto-sans-kr-v27-latin_korean-500.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+/* noto-sans-kr-700 - latin_korean */
+@font-face {
+	font-family: 'NotoSansKR-Bold';
+	src: url('../font/noto-sans-kr-v27-latin_korean-700.eot'); /* IE9 Compat Modes */
+	src: local('NotoSansKR-Bold'),
+		url('../font/noto-sans-kr-v27-latin_korean-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../font/noto-sans-kr-v27-latin_korean-700.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../font/noto-sans-kr-v27-latin_korean-700.woff') format('woff'), /* Modern Browsers */
+		url('../font/noto-sans-kr-v27-latin_korean-700.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../font/noto-sans-kr-v27-latin_korean-700.svg#NotoSansKR') format('svg'); /* Legacy iOS */
+}
+
+/* libre-baskerville-regular - latin */
+@font-face {
+  font-family: 'LibreBaskerville-Regular';
+  src: url('../font/libre-baskerville-v14-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/libre-baskerville-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/libre-baskerville-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/libre-baskerville-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../font/libre-baskerville-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/libre-baskerville-v14-latin-regular.svg#LibreBaskerville') format('svg'); /* Legacy iOS */
+}
+
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../font/montserrat-v25-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/montserrat-v25-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/montserrat-v25-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/montserrat-v25-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../font/montserrat-v25-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/montserrat-v25-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* montserrat-500 - latin */
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('../font/montserrat-v25-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/montserrat-v25-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/montserrat-v25-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/montserrat-v25-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../font/montserrat-v25-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/montserrat-v25-latin-500.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+/* montserrat-700 - latin */
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('../font/montserrat-v25-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../font/montserrat-v25-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../font/montserrat-v25-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../font/montserrat-v25-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../font/montserrat-v25-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../font/montserrat-v25-latin-700.svg#Montserrat') format('svg'); /* Legacy iOS */
+}
+
+/* ------------------------------ FONTFACE (end) ------------------------------ */
+
+
+
+
+body { color: #333; font-family: "NotoSansKR-Regular";}
+
+section { overflow: hidden; }
+p.title { font-family: "Montserrat-Bold"; font-size: 2em; }
+span.aqua { color: #4da6ff; }
+span.zoo { color: #f5b975; }
+.inner_wrap { position: relative; width: 100%; max-width: 1132px; margin: 0 auto; } 
+/* 혹시 모를 absolute를 위한 것. 넣어놔도 상관 없음 */
+div.water_line { overflow-x: hidden; position: absolute; z-index: 99; width: 100%; height: 15%; transform: translateY(-30%); }
+
+
+
+
+
+@media screen and (max-width: 767px) {
+/* ------------------------------ Mobile (Start) ------------------------------ */
+	
+	
+	
+	
+	
+	
+/* ------------------------------ Mobile (End) ------------------------------ */
+}
+
+/* 
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@   MOBILE	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+/* ------------------------------ TABLET (Start) ------------------------------ */
+	
+	
+	
+	
+/* ------------------------------ TABLET (End) ------------------------------ */
+}
+
+/* 
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@   TABLET	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+
+
+@media screen and (min-width: 1025px) {
+/* ------------------------------ DESKTOP (Start) ------------------------------ */
+	section.header { overflow: hidden; position: fixed; z-index: 100; width: 100%; height: 135px; background: rgba(255, 255, 255, 0.9); box-shadow: 5px 5px 10px #ddd; transition: height 0.2s; }
+	section.header:hover { height: 280px; }
+	section.header h1 { position: absolute; top: 15px; left: 10%; z-index: 107; width: 140px; height: 104px; background: url("../images/img_header_logo_D.png") no-repeat center center; }
+	section.header nav { float: right; }
+	section.header nav > ul > li { float: left; padding: 40px; text-align: center; }
+	section.header nav > ul > li > button { display: inline-block; height: 70px; color: #2376c9; font-size: 1.25em; line-height: 70px; }
+	section.header ul.sub { padding-top: 10px; }
+	section.header ul.sub > li { padding: 10px 0; font-size: 1.125em; }
+	section.header ul.sub > li > a { padding: 3px 0; }
+	section.header nav > ul > li:hover > button { font-weight: bold; }
+	section.header nav > ul > li > button.active { font-weight: bold; }
+	
+
+	
+	section.footer { position: relative; top: 0; left: 0; margin: 0 auto; width: 100%; height: 270px; background: #022a53; color: #fff; }
+	section.footer div.footer_wrap { position: relative; top: 0; left: 0; width: 100%; height: 100%; margin: 0; }
+	
+	section.footer div.inner_wrap_sub { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+	section.footer div.inner_wrap_sub a.footer_logo { position: absolute; top: 20%; left: 15%; width: 140px; height: 104px; background: url("../images/img_header_logo_D.png") no-repeat center center; }
+	section.footer div.inner_wrap_sub > ul > li > p.footer_txt { position: absolute; top: 20%; left: 27%; }
+	
+	section.footer div.inner_wrap_sub div.sns_wrap { position: relative; top: 20%; left: 65%; }
+	section.footer div.inner_wrap_sub div.sns_wrap > a:nth-child(1) { display: inline-block; width: 26px; height: 26px; margin-right: 10px; background: url("../images/img_footer_sns_icon_01.png") no-repeat center center; }
+	section.footer div.inner_wrap_sub div.sns_wrap > a:nth-child(2) { display: inline-block; width: 26px; height: 26px; margin-right: 10px; background: url("../images/img_footer_sns_icon_02.png") no-repeat center center; }
+	section.footer div.inner_wrap_sub div.sns_wrap > a:nth-child(3) { display: inline-block; width: 26px; height: 26px; margin-right: 10px; background: url("../images/img_footer_sns_icon_03.png") no-repeat center center; }
+	section.footer div.inner_wrap_sub div.sns_wrap > a:nth-child(4) { display: inline-block; width: 26px; height: 26px; margin-left: 0; background: url("../images/img_footer_sns_icon_04.png") no-repeat center center; }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/* ------------------------------ DESKTOP (End) ------------------------------ */
+}
+
+/* 
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@   DESKTOP	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
